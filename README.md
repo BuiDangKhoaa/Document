@@ -61,7 +61,7 @@ VPS (Virtual Private Server) hay máy chủ ảo riêng, là một loại dịch
 Server còn được gọi là máy chủ là một máy tính (phần cứng và phần mềm) được kết nối mạng máy tính hoặc Internet. Trên máy chủ cài đặt thêm các phần mềm hệ thống hay một máy tính chuyên dụng. Hoặc nhiều máy tính nối mạng có khả năng lưu trữ để phục vụ và cung cấp các dịch vụ và tài nguyên cho các máy tính khác truy cập.
 
 ### Hệ thống server gồm
-** Mainboard server (Bo mạch chủ) **
+**Mainboard server (Bo mạch chủ)**
 * Kết nối và truyền dẫn giữa các thiết bị trong máy.
 * Có khe socket cho các bo mạch phụ, kênh truyền dữ liệu, bộ xử lý, khe chứa bộ nhớ, giao diện cho các thiết bị ngoại vi.
 * Có thể tích hợp các mạch điều khiển cho modem, âm thanh, card màn hình.
@@ -69,42 +69,58 @@ Server còn được gọi là máy chủ là một máy tính (phần cứng v�
 * Có khe socket cho các bo mạch phụ, kênh truyền dữ liệu, bộ xử lý, khe chứa bộ nhớ, giao diện cho các thiết bị ngoại vi.
 * Có thể tích hợp các mạch điều khiển cho modem, âm thanh, card màn hình.
 
-** RAM (Bộ nhớ truy cập ngẫu nhiên) **
+**RAM (Bộ nhớ truy cập ngẫu nhiên)**
 * Quyết định khả năng xử lý của máy chủ tại một thời điểm.
 * Có 2 loại chính là SDR và DDR, với DDR có tốc độ truyền dữ liệu nhanh hơn.
 * RAM server thường có chức năng ECC để kiểm tra và sửa lỗi.
 
-** Chassis server **
+**Chassis server**
 * Bảo vệ các thiết bị phần cứng bên trong máy.
 * Có các loại như Rack Mount, Tower server, Blade server tùy thuộc vào kích thước và mục đích sử dụng.
 
-** HDD server (Ổ cứng máy chủ) **
+**HDD server (Ổ cứng máy chủ)**
 * Lưu trữ dữ liệu, hệ điều hành, phần mềm ứng dụng và dữ liệu người dùng.
 * Có thể gắn nhiều HDD để tăng dung lượng lưu trữ.
 * Sử dụng chuẩn giao tiếp cao như SCSI để tăng tốc độ và đảm bảo kết nối trong hệ thống mạng LAN.
 
-** Card RAID **
+**Card RAID**
 * Kết hợp các ổ cứng thành một hệ thống nhất với cơ chế sao lưu và chống lỗi.
 * Bảo vệ dữ liệu khi có sự cố vật lý xảy ra.
 
 Tất cả các thành phần này là những yếu tố quan trọng để xây dựng và duy trì một hệ thống server ổn định và hiệu quả.
 
+### Vai trò của máy chủ 
+Vai trò chính của máy chủ (server) là lưu trữ, cung cấp và xử lý dữ liệu rồi chuyển đến các máy trạm liên tục 24/7 cho người dùng hay một tổ chức thông qua mạng LAN hoặc Internet. Máy chủ được thiết kế để có thể chạy liên tục trong thời gian dài và chỉ tắt khi có sự cố gì đó cần bảo trì.
 
+Máy chủ là bộ phận quan trọng đối với công ty/doanh nghiệp trong việc lưu trữ cơ sở dữ liệu, thông tin, quản lý và vận hành những phần mềm của doanh nghiệp. Chỉ cần tối ưu phần cứng cho hệ thống máy chủ mà không cần phải đầu tư chi phí nhiều các máy trạm khác.
 
+### Mô hình hoạt động của hệ thống máy chủ
+Các máy chủ thường hoạt động trong mô hình Client – Server (máy khách – máy chủ). Máy khách kết nối với máy chủ thông qua hạ tầng mạng sử dụng giao thức IP (Internet Protocol), một máy chủ hoạt động như một socket listener. 
 
+![ảnh](https://github.com/user-attachments/assets/643364e7-bd88-4dc9-a186-aab498355257)
 
+Thông qua mạng hoặc internet các máy chủ cung cấp dịch vụ thiết yếu cho người dùng hoặc cá nhân trong tổ chức. Khi cần, một mô hình thay thế là mạng peer-to-peer cho phép các máy tính hoạt động như một trong hai Server hoặc Client.
 
+### Phân loại máy chủ
+Hiện nay, có nhiều loại máy chủ khác nhau, để dựa vào phương pháp tạo thành hệ thống máy chủ thì máy chủ được chia thành 3 loại chung như sau:
 
+**Máy chủ vật lý (Dedicated Server)**
+Là máy chủ chạy trên phần cứng như RAM, HDD, CPU, Card mạng,… Tất cả đều phụ thuộc vào phần cứng, khi hư hỏng hay thay đổi cấu hình máy chủ và nâng cấp đều phải thay đổi phần cứng của máy chủ.
 
+**Máy chủ ảo (VPS – Virtual Private Server)**
+Máy chủ ảo VPS, được chia thành nhiều server khác từ máy chủ vật lý. Và nó có tính năng như máy chủ vật lý ban đầu. Việc nâng cấp dễ dàng thông qua phần mềm quản lý hệ thống.
 
+**Máy chủ đám mây (Cloud Server)**
+Là máy chủ được xây dựng trên nền tảng điện toán đám mây nên dễ dàng nâng cấp từng phần mà không gián đoạn quá trình sử dụng. Và được kết hợp từ nhiều máy chủ vật lý khác nhau với cùng hệ thống lưu trữ SAN (Storage Area Network) với tốc độ truy xuất vượt trội giúp máy chủ hoạt động ổn định.
 
-
-
-
-
-
-
-
+Dựa vào chức năng server, chia làm các loại máy chủ sau: 
+* Máy chủ ứng dụng (Application Server): Thuật ngữ gọi chung cho các máy chủ chạy ứng dụng (application). 
+* Máy chủ Audio / Video Server: Cung cấp đa phương tiện cho website phát cho người dùng phát nội dung đa phương tiện.
+* Máy chủ web (Web Server): Là máy chủ mang website đến với người dùng và kết nối với nhau thông qua giao thức HTTP, nội dung được hiển thị chủ yếu dưới dạng HTML.
+* Máy chủ FTP (FTP server): Cung cấp khả năng truyền file an toàn, bảo mật và kiểm soát đường truyền giữa các máy tính.
+* Máy chủ DNS (DNS Server): Là máy chủ phân giải tên miền. Để thuận tiện cho việc sử dụng và dễ nhớ ta dùng tên (domain name) để xác định thiết bị đó. Hệ thống tên miền DNS (Domain Name System) được sử dụng để ánh xạ tên miền thành địa chỉ IP.
+* Máy chủ DHCP (DHCP server): Là máy chủ có cài đặt DHCP có chức năng quản lý sự cấp phát địa chỉ IP động và các dữ liệu cấu hình TCP/IP.
+* Máy chủ Database (Database Server): là máy chủ cài đặt phần mềm hệ quản trị cơ sở dữ liệu: MySQL, SQL server,…
 
 
 
