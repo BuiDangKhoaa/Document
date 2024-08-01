@@ -46,7 +46,7 @@ VPS (Virtual Private Server) hay máy chủ ảo riêng, là một loại dịch
 * Sử dụng cho hệ thống email doanh nghiệp
 * Các chương trình truyền thông online
 
-  ### Các thông số cần biết khi thuê máy chủ ảo VPS
+### Các thông số cần biết khi thuê máy chủ ảo VPS
   * CPU
   * RAM
   * SWAP
@@ -122,14 +122,85 @@ Dựa vào chức năng server, chia làm các loại máy chủ sau:
 * Máy chủ DHCP (DHCP server): Là máy chủ có cài đặt DHCP có chức năng quản lý sự cấp phát địa chỉ IP động và các dữ liệu cấu hình TCP/IP.
 * Máy chủ Database (Database Server): là máy chủ cài đặt phần mềm hệ quản trị cơ sở dữ liệu: MySQL, SQL server,…
 
+## Địa chỉ IP
+Địa chỉ IP là viết tắt của Internet Protocol – giao thức Internet. Đây là một địa chỉ đơn nhất mà những thiết bị điện tử hiện nay đang sử dụng để nhận diện và liên lạc với nhau trên mạng máy tính bằng cách sử dụng giao thức Internet. Về bản chất, địa chỉ IP là mã định danh cho phép gửi thông tin giữa các thiết bị trên mạng: IP chứa thông tin vị trí và giúp các thiết bị điện tử có thể truy cập được để liên lạc.
 
+Internet cần một cách để phân biệt giữa các máy tính, bộ định tuyến (router) và trang web khác nhau. Địa chỉ IP cung cấp một cách thức hoạt động và tạo thành một phần thiết yếu của cách thức hoạt động của Internet. Địa chỉ IP là một chuỗi số được phân tách bằng dấu chấm. Địa chỉ IP được biểu thị dưới dạng một tập hợp bốn số – một địa chỉ ví dụ có thể là 192.158.1.38. Thông thường, mỗi số có trong tập hợp này sẽ ngẫu nhiên từ 0 – 255.  Vì vậy, phạm vi địa chỉ IP đầy đủ là từ 0.0.0.0 đến 255.255.255.255.
 
+### Địa chỉ IP được dùng để
+Địa chỉ IP cung cấp danh tính của các thiết bị được kết nối mạng có thể giúp nhận dạng thiết bị và phục vụ cho việc trao đổi thông tin. Giao thức Internet hoạt động giống như các ngôn ngữ khác, giao tiếp bằng cách sử dụng các nguyên tắc đã thiết lập để truyền thông tin.
 
+Giao thức Internet được dùng để thiết bị này có thể tìm, gửi và trao đổi dữ liệu / thông tin với thiết bị khác. Bằng cách nói cùng một ngôn ngữ, bất kỳ máy tính nào ở bất kỳ vị trí nào cũng có thể kết nối với nhau.Ví dụ: Để gửi hàng cho một người, bạn cần phải biết địa chỉ chính xác để gửi hành. Cần phải ghi địa chỉ cụ thể bằng cách tra cứu trong danh sách địa chỉ mà bạn có. Đối với địa chỉ IP cũng vậy, thay vì tìm địa chỉ thì máy tính sử dụng các máy chủ DNS để tìm kiếm địa chỉ IP của máy đó.
 
+### Cấu tạo của địa chỉ IP
+Các bit đầu tiên trong địa chỉ IP được gọi theo thuật ngữ chuyên dùng là các bit mạng. Chúng xác định một mạng cụ thể. Các bit còn lại được gọi là các bit chủ và xác định một thiết bị (hoặc máy chủ) trong mạng đó. Giá trị đầu tiên của địa chỉ IP cho biết địa chỉ được chia thành các bit mạng và các bit máy chủ. Có ba lớp địa chỉ được xác định bởi giá trị ban đầu này:
 
+* Lớp A:  8 bit mạng và 24 bit host
+* Lớp B:  16 bit mạng và 16 bit host
+* Lớp C:  24 bit mạng và 8 bit host
 
+![ảnh](https://github.com/user-attachments/assets/533d8a3b-df72-412b-bc64-47d3c3a96659)
 
+### IPv6
+IPv6 (Internet Protocol version 6) là một phiên bản của giao thức Internet Protocol (IP), được thiết kế để thay thế và mở rộng IPv4 (Internet Protocol version 4), phiên bản IP trước đó. IPv6 được phát triển để giải quyết vấn đề cạn kiệt địa chỉ IP duy nhất của IPv4 do sự mở rộng nhanh chóng của Internet và sự gia tăng số lượng thiết bị kết nối.
 
+Một số đặc điểm chính của IPv6 bao gồm:
+* Kích thước địa chỉ:IPv6 sử dụng địa chỉ IP dạng 128 bit, so với IPv4 chỉ có 32 bit. Điều này tăng khả năng cung cấp số lượng địa chỉ IP hỗ trợ cho sự mở rộng toàn cầu của Internet.
+* Khả năng mở rộng: Với kích thước địa chỉ lớn hơn, IPv6 cung cấp một không gian địa chỉ IP đủ lớn để chứa số lượng lớn hơn các địa chỉ IP.
+* Hỗ trợ an ninh: IPv6 tích hợp nhiều tính năng bảo mật hơn so với IPv4, bao gồm cơ chế xác thực và mã hóa dữ liệu.
+* Tích hợp quản lý dịch vụ: IPv6 hỗ trợ tích hợp các dịch vụ quản lý mạng, giúp quản trị server dễ dàng hơn.
+
+IPv6 là một phần quan trọng của nỗ lực chuyển đổi để đảm bảo Internet có đủ địa chỉ IP và đáp ứng được với sự mở rộng ngày càng tăng. Tuy IPv4 vẫn còn phổ biến, nhưng việc triển khai IPv6 đang được khuyến khích để đảm bảo sự liên thông và bền vững của Internet trong tương lai.
+
+### IPv4 
+Pv4 (Internet Protocol version 4) là một phiên bản của giao thức Internet Protocol (IP), được thiết kế để xác định và gửi dữ liệu giữa các thiết bị trên Internet. IPv4 là phiên bản chính thức đầu tiên của IP và là nền tảng cơ bản cho việc kết nối mạng trên toàn cầu.
+
+Dưới đây là một số đặc điểm chính của IPv4:
+* Kích thước địa chỉ: IPv4 sử dụng địa chỉ IP dạng 32 bit, tạo ra khoảng 4,3 tỷ (2^32) địa chỉ duy nhất. Địa chỉ IP thường được biểu diễn dưới dạng bốn nhóm số thập phân, ví dụ: 192.168.0.1.
+* Sự cạn kiệt địa chỉ: Vì số lượng địa chỉ IPv4 có hạn, và Internet ngày càng mở rộng nhanh chóng, cạn kiệt địa chỉ IPv4 trở thành vấn đề lớn. Điều này đã thúc đẩy sự phát triển và triển khai của IPv6.
+* Không gian địa chỉ: IPv4 định nghĩa ba loại địa chỉ IP chính: địa chỉ dành cho mạng (network address), địa chỉ dành cho thiết bị (host address), và địa chỉ dành cho địa chỉ đặc biệt (broadcast address).
+* Phương thức truyền tải dữ liệu: IPv4 sử dụng giao thức truyền tải dữ liệu có tên là Transmission Control Protocol (TCP) hoặc User Datagram Protocol (UDP) để chuyển giao thông mạng.
+
+### Các loại địa chỉ IP
+IP Public – Địa chỉ IP công cộng
+
+Địa chỉ IP công cộng (IP Public) là loại địa chỉ mà nhà cung cấp Internet dùng để truyền tải những yêu cầu về hệ thống mạng đến một tổ chức hoặc hộ gia đình cụ thể. Có thể nói, đây cũng là địa chỉ mà hệ thống mạng tổ chức, gia đình dùng để kết nối/liên lạc với nhiều thiết bị đã cài đặt Internet khác. Điều này cho phép người dùng kiểm soát được các thiết bị có trong danh mục được phép truy cập hệ thống mạng này.
+
+IP Private – Địa chỉ IP cá nhân
+
+Địa chỉ IP cá nhân (hay còn gọi là IP Private) là địa chỉ riêng sử dụng trong nội bộ mạng LAN như mạng gia đình, nhà trường, công ty. Địa chỉ IP Private khác với IP Public ở chỗ chỉ có các thiết bị trong cùng một mạng mới có thể thực hiện chức năng giao tiếp với nhau bằng bộ định tuyến router, ngoài ra các thiết bị khác không thể thực hiện kết nối mạng Internet với cùng địa chỉ IP này. Người dùng có thể tự thiết lập địa chỉ IP cá nhân bằng phương pháp thủ công, hoặc cho phép bộ định tuyến cài đặt tự động.
+
+IP Static – Địa chỉ IP tĩnh
+
+Địa chỉ IP tĩnh (IP Static) được hiểu là một loại IP được thiết kế riêng biệt và cố định cho một hoặc một nhóm người sử dụng, với điều kiện mọi thiết bị kết nối đến Internet của họ đều được đặt cùng một địa chỉ IP. Thông thường IP tĩnh được cấp cho một máy chủ với một mục đích riêng như web server, email,… để nhiều người có thể truy cập mà không làm gián đoạn các quá trình đó.
+
+IP Dynamic – Địa chỉ IP động
+
+Trong trường hợp doanh nghiệp không muốn dùng IP tĩnh cho khách hàng, họ chỉ được hệ thống ISP gán cho mỗi lần kết nối là một địa chỉ IP khác nhau. Sau đó, khi một phiên kết nối hoàn tất, địa chỉ IP này sẽ tự động thay đổi. Hiện nay, nguồn địa chỉ IP đang trở nên cạn kiệt, và phương pháp hữu dụng để khắc chế tình trạng này là việc ISP cung cấp IP động. Điều này được hiểu rằng, khi một thiết bị không được truy cập vào mạng Internet, thì nhà cung cấp sẽ tận dụng IP này để cấp cho một người dùng khác.
+
+### Ứng dụng của địa chỉ IP 
+Hacker trên mạng có thể sử dụng nhiều kỹ thuật khác nhau để lấy địa chỉ IP của bạn. Hai trong số những cách phổ biến nhất là dùng social engineering và online stalking.
+* Online stalking
+* Tải xuống nội dung bất hợp pháp bằng địa chỉ IP của bạn
+* Theo dõi vị trí
+* Trực tiếp tấn công mạng
+* Tấn công vào thiết bị
+
+### Hướng dẫn cách ẩn địa chỉ IP
+Ẩn địa chỉ IP là một cách để bảo vệ thông tin cá nhân và danh tính trực tuyến của bạn. Hai cách chính để ẩn địa chỉ IP của bạn là:
+
+* Sử dụng proxy server
+* Sử dụng mạng riêng ảo (VPN)
+
+## Domain
+Domain (hay tên miền) là địa chỉ độc nhất của một website trên Internet, hoạt động giống như một “ngôi nhà ảo” chứa đựng toàn bộ nội dung và thông tin của trang web. Thay vì phải ghi nhớ dãy số phức tạp của địa chỉ IP, người dùng có thể dễ dàng truy cập website bằng cách nhập tên miền vào trình duyệt.
+
+Tên miền được cấu thành từ các ký tự và chữ số trong bảng chữ cái, kết hợp với TLD (Top-Level Domain) như .com, .net, .org, .vn,… Bên cạnh domain chính (main domain), bạn có thể tạo thêm subdomain để tổ chức website một cách hiệu quả.
+
+Đây là ví dụ minh họa cho sự khác nhau giữa địa chỉ URL (Uniform Resource Locator) và một tên miền:
+
+URL: https://vietnix.vn/domain-la-gi/
+Tên miền: vietnix.vn
 
 
 
