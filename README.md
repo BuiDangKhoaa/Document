@@ -56,4 +56,76 @@ VPS (Virtual Private Server) hay máy chủ ảo riêng, là một loại dịch
   * Thời gian uptime của máy ảo
   * Hệ điều hành
   * Sao lưu dữ liệu (backup)
+
+## Máy chủ (Server)
+Server còn được gọi là máy chủ là một máy tính (phần cứng và phần mềm) được kết nối mạng máy tính hoặc Internet. Trên máy chủ cài đặt thêm các phần mềm hệ thống hay một máy tính chuyên dụng. Hoặc nhiều máy tính nối mạng có khả năng lưu trữ để phục vụ và cung cấp các dịch vụ và tài nguyên cho các máy tính khác truy cập.
+
+### Hệ thống server gồm
+Mainboard server (Bo mạch chủ)
+* Kết nối và truyền dẫn giữa các thiết bị trong máy.
+* Có khe socket cho các bo mạch phụ, kênh truyền dữ liệu, bộ xử lý, khe chứa bộ nhớ, giao diện cho các thiết bị ngoại vi.
+* Có thể tích hợp các mạch điều khiển cho modem, âm thanh, card màn hình.
+* Kết nối và truyền dẫn giữa các thiết bị trong máy.
+* Có khe socket cho các bo mạch phụ, kênh truyền dữ liệu, bộ xử lý, khe chứa bộ nhớ, giao diện cho các thiết bị ngoại vi.
+* Có thể tích hợp các mạch điều khiển cho modem, âm thanh, card màn hình.
+RAM (Bộ nhớ truy cập ngẫu nhiên)
+* Quyết định khả năng xử lý của máy chủ tại một thời điểm.
+* Có 2 loại chính là SDR và DDR, với DDR có tốc độ truyền dữ liệu nhanh hơn.
+* RAM server thường có chức năng ECC để kiểm tra và sửa lỗi.
+Chassis server
+* Bảo vệ các thiết bị phần cứng bên trong máy.
+* Có các loại như Rack Mount, Tower server, Blade server tùy thuộc vào kích thước và mục đích sử dụng.
+HDD server (Ổ cứng máy chủ)
+* Lưu trữ dữ liệu, hệ điều hành, phần mềm ứng dụng và dữ liệu người dùng.
+* Có thể gắn nhiều HDD để tăng dung lượng lưu trữ.
+* Sử dụng chuẩn giao tiếp cao như SCSI để tăng tốc độ và đảm bảo kết nối trong hệ thống mạng LAN.
+Card RAID
+* Kết hợp các ổ cứng thành một hệ thống nhất với cơ chế sao lưu và chống lỗi.
+* Bảo vệ dữ liệu khi có sự cố vật lý xảy ra.
+Tất cả các thành phần này là những yếu tố quan trọng để xây dựng và duy trì một hệ thống server ổn định và hiệu quả.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     
