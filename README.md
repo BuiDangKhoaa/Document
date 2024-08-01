@@ -432,6 +432,51 @@ Có 6 loại RAM động:
 6. DDR4: Là bản thay thế cho DDR3, xuất hiện lần đầu ở năm 2014, nó được nâng cấp về tốc độ (khoảng 2133 – 4266 MHz khi truyền tải), sử dụng điện áp thấp (chỉ cần 1.2V). Vì thế, DDR4 sẽ có mức giá nhỉnh hơn thế hệ tiền nhiệm. 
 
 
+## SSL
+
+SSL là gì ?
+
+Có bao nhiêu cách chứng thực SSL ?
+
+CSR file dùng làm gì trong quá trình tạo SSL
+
+Sử dụng OpenSSL để gen file CSR sau đó request SSL cho domain tech.training.vietnix.tech
+
+Pem file là gì ?
+
+Private key ssl là gì ?
+
+PFX file là gì ? Cách chuyển từ file crt file sang PFX file.
+
+
+Domain
+
+Domain là gì ?
+
+Các trạng thái của domain
+
+Subdomain là gì?
+
+Virtual Hosts là gì?
+
+
+## Mail Server
+
+Tìm hiểu MX Record
+
+Tìm hiểu DKIM, SPF, PTR
+
+
+
+DNS
+
+DNS là gì ?
+
+Các loại recored DNS
+
+Nguyên tắc làm việc của DNS
+
+Cách phân giải địa chỉ DNS
 
 
 
