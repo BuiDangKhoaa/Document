@@ -25,6 +25,35 @@ VPS (Virtual Private Server) hay máy chủ ảo riêng, là một loại dịch
 
 ### Cách hoạt động của VPS
 1. Ảo hoá: Công nghệ ảo hoá đóng vai trò quan trọng trong việc tạo ra các VPS. Ban đầu, công ty cung cấp VPS sẽ cài đặt phần mềm ảo hoá trên hệ điều hành (OS) của máy chủ vật lý để chia server thành nhiều máy ảo VPS riêng biệt. Và mỗi VPS sẽ được mô phỏng như một máy tính hoàn chỉnh với CPU, RAM, ổ cứng và hệ điều hành riêng. Các phần mềm ảo hoá cho VPS phổ biến trên thị trường như: VMWare, Hyper – V, KVM.
+
 2. Phân bổ tài nguyên: Khi thuê một VPS, bạn sẽ được cung cấp một lượng tài nguyên nhất định, bao gồm CPU, RAM, dung lượng ổ cứng và băng thông (Bandwidth). Tài nguyên này đã được phân bổ riêng biệt cho từng gói VPS bạn thuê nên sẽ không chia sẻ tài nguyên này với bất kỳ VPS nào đang hoạt động trên cùng một máy chủ.
+  
 3. Hệ điều hành và phần mềm: Về hệ điều hành, bạn có thể cài đặt hệ điều mình và phần mềm mong muốn trên VPS của mình. Mặc định ban đầu các gói VPS sẽ có sẵn hệ điều hành Windows và Linux.
+   
 4. Quản lý VPS: Khi quản lý VPS, bạn có quyền truy cập root/admin vào VPS của mình, cho phép bạn kiểm soát hoàn toàn cấu hình và quản trị hệ thống thông qua giao diện web hoặc dòng lệnh. Hiện tại khi thuê VPS Vietnix bạn sẽ được sử dụng Control Panel để quản lý VPS của mình đó là DirectAdmin giúp bạn quản lý dễ dàng và được tích hợp nhiều tính năng hỗ trợ.
+
+### Lợi ích sử dụng VPS
+* Kiểm soát nâng cao và tính linh hoạt: Dịch vụ VPS cấp cho người dùng quyền truy cập root vào máy ảo của họ, cho phép họ tùy chỉnh môi trường máy chủ, cài đặt phần mềm cụ thể và định cấu hình cài đặt nếu cần. Tính năng kiểm soát chi tiết này không thể thực hiện được với dịch vụ lưu trữ chia sẻ.
+* Cải thiện hiệu suất và khả năng mở rộng: Người dùng VPS có các tài nguyên chuyên dụng, bao gồm CPU, RAM và bộ nhớ, đảm bảo hiệu suất ổn định và loại bỏ tắc nghẽn tài nguyên thường gặp trong môi trường Shared Hosting. Ngoài ra, dịch vụ lưu trữ VPS có thể dễ dàng tăng hoặc giảm quy mô để đáp ứng nhu cầu luôn biến động.
+* Tăng cường bảo mật và độ tin cậy: Người dùng VPS có các tài nguyên chuyên cung cấp một môi trường biệt lập và an toàn hơn so với Shared Hosting. Mỗi máy ảo sẽ hoạt động độc lập, giảm nguy cơ vi phạm bảo mật và các vấn đề về hiệu suất do người dùng khác trên máy chủ gây ra.
+  
+### Ứng dụng của VPS
+* Đối với máy chủ game
+* Tạo ra môi trường ảo cho quy trình lập trình, phân tích, nghiên cứu sản phẩm
+* Lưu trữ website đa dịch vụ
+* Làm nơi lưu trữ các dữ liệu: Tài liệu, video, hình ảnh, data riêng
+* Phát triển Platform
+* Sử dụng cho hệ thống email doanh nghiệp
+* Các chương trình truyền thông online
+
+  ### Các thông số cần biết khi thuê máy chủ ảo VPS
+  * CPU
+  * RAM
+  * SWAP
+  * Ổ cứng
+  * Băng thông
+  * IP
+  * Thời gian uptime của máy ảo
+  * Hệ điều hành
+  * Sao lưu dữ liệu (backup)
+    
