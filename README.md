@@ -3,7 +3,7 @@
 Hosting hay web hosting là không gian lưu trữ dữ liệu được chia nhỏ từ các máy chủ (server), giúp đăng tải dữ liệu và xuất bản website, app trên Internet. Khi đăng ký dịch vụ hosting, nghĩa là đang thuê một chỗ đặt chứa tất cả các file và dữ liệu cần thiết lên trên server để website có thể hoạt động được 24/7.
 Tất cả các website của nhiều khách hàng đều dùng chung tài nguyên của máy chủ như CPU ​​và RAM.
 
-Cơ bản thì hosting hoạt động từ 3 phía: người dùng, nhà cung cấp dịch vụ và người thuê hosting.
+### Cơ bản thì hosting hoạt động từ 3 phía: người dùng, nhà cung cấp dịch vụ và người thuê hosting.
 1. Đối với khách hàng truy cập website
 
 Sau khi hoàn thành quá trình mua hosting và tải lên dữ liệu lên trang web, thì website của bạn về cơ bản sống trên một máy chủ. Người dùng có thể truy cập trang web đó bằng cách nhập địa chỉ trang web (tên miền) tương ứng vào trình duyệt web. Khi nhận được truy vấn, máy tính của họ sẽ kết nối với máy chủ mà trang web được lưu trữ.
@@ -29,7 +29,7 @@ Virtual Hosts được xem là một giải pháp tối ưu vừa tiết kiệm 
 - Bạn có thể dễ dàng thao tác vào một thư mục lưu trữ Code nào và không phải copy Code vào htdocs trong giao diện XAMPP.
 - Trong quá trình thiết lập ban đầu, nếu bạn phân vùng lưu trữ Code ở một Folder Code nhất định, thì bạn sẽ không tốn thời gian sao lưu lại dữ liệu trong Folder Code khi cài đặt lại hệ điều hành Window.
 
-Cách thức vận hành của Virtual Host
+### Cách thức vận hành của Virtual Host
 
 Có nhiều cách khác nhau để xác định cấu hình của một Virtual Host, nhưng cách được sử dụng thông dụng ngày nay là:
 
@@ -37,15 +37,15 @@ Có nhiều cách khác nhau để xác định cấu hình của một Virtual 
 - Port – Based.
 - Name Based.
 
-IP Based
+#### IP Based
 
 IP-Based Virtual Hosts (xác định website dựa theo IP): Đây là phương pháp đơn giản nhất trong 3 phương pháp, Một IP sử dụng cho 1 Website. Máy chủ web sẽ chịu trách nhiệm ánh xạ IP được yêu cầu có đế đến đúng website mong muốn hay không. Vì thế, mỗi trang web sẽ được định nghĩa bởi 1 IP duy nhất nhằm tránh những vấn đề không đáng có cho trang web liên quan đến địa chỉ IP. Tuy nhiên IP-Based (dùng trên 1 máy chủ) cần thiết lập Virtual Interface trên 1 máy chủ để có thể sử dụng được nhiều IP.
 
-Port Based
+#### Port Based
 
 Port Based tương đương với IP-Based, nhưng sự khác biệt ở phương thức này là có thể quản lý nhiều trang web dựa theo số Port được định nghĩa cùng với IP hoặc tên miền. Ngoài ra, Port sử dụng tránh lặp lại với Port được mặc định của ứng dụng khác khi đang hoạt động.
 
-Name Based
+#### Name Based
 
 Name Based (xác định website dựa theo tên – Domain Name): Nhiều website sử dụng chung 1 IP. Server sẽ đối chiếu http header từ client yêu cầu để ánh xạ đến đúng website được chỉ định theo Domain. Cho nên, Name-Based rất được ưa thích trong việc quản lý nhiều trang web trên cùng 1 máy chủ và trước tình trạng thế giới đang dần cạn kiệt IP Public, đồng thời sử dụng tối đa tài nguyên hiện có. Hạn chế lớn nhất khi bạn dùng IP chung, nếu gặp vấn đề thì tất cả các trang web của bạn đều sẽ bị ảnh hưởng theo.
 
@@ -205,19 +205,19 @@ Dưới đây là một số đặc điểm chính của IPv4:
 * Phương thức truyền tải dữ liệu: IPv4 sử dụng giao thức truyền tải dữ liệu có tên là Transmission Control Protocol (TCP) hoặc User Datagram Protocol (UDP) để chuyển giao thông mạng.
 
 ### Các loại địa chỉ IP
-IP Public – Địa chỉ IP công cộng
+#### IP Public – Địa chỉ IP công cộng
 
 Địa chỉ IP công cộng (IP Public) là loại địa chỉ mà nhà cung cấp Internet dùng để truyền tải những yêu cầu về hệ thống mạng đến một tổ chức hoặc hộ gia đình cụ thể. Có thể nói, đây cũng là địa chỉ mà hệ thống mạng tổ chức, gia đình dùng để kết nối/liên lạc với nhiều thiết bị đã cài đặt Internet khác. Điều này cho phép người dùng kiểm soát được các thiết bị có trong danh mục được phép truy cập hệ thống mạng này.
 
-IP Private – Địa chỉ IP cá nhân
+#### IP Private – Địa chỉ IP cá nhân
 
 Địa chỉ IP cá nhân (hay còn gọi là IP Private) là địa chỉ riêng sử dụng trong nội bộ mạng LAN như mạng gia đình, nhà trường, công ty. Địa chỉ IP Private khác với IP Public ở chỗ chỉ có các thiết bị trong cùng một mạng mới có thể thực hiện chức năng giao tiếp với nhau bằng bộ định tuyến router, ngoài ra các thiết bị khác không thể thực hiện kết nối mạng Internet với cùng địa chỉ IP này. Người dùng có thể tự thiết lập địa chỉ IP cá nhân bằng phương pháp thủ công, hoặc cho phép bộ định tuyến cài đặt tự động.
 
-IP Static – Địa chỉ IP tĩnh
+#### IP Static – Địa chỉ IP tĩnh
 
 Địa chỉ IP tĩnh (IP Static) được hiểu là một loại IP được thiết kế riêng biệt và cố định cho một hoặc một nhóm người sử dụng, với điều kiện mọi thiết bị kết nối đến Internet của họ đều được đặt cùng một địa chỉ IP. Thông thường IP tĩnh được cấp cho một máy chủ với một mục đích riêng như web server, email,… để nhiều người có thể truy cập mà không làm gián đoạn các quá trình đó.
 
-IP Dynamic – Địa chỉ IP động
+#### IP Dynamic – Địa chỉ IP động
 
 Trong trường hợp doanh nghiệp không muốn dùng IP tĩnh cho khách hàng, họ chỉ được hệ thống ISP gán cho mỗi lần kết nối là một địa chỉ IP khác nhau. Sau đó, khi một phiên kết nối hoàn tất, địa chỉ IP này sẽ tự động thay đổi. Hiện nay, nguồn địa chỉ IP đang trở nên cạn kiệt, và phương pháp hữu dụng để khắc chế tình trạng này là việc ISP cung cấp IP động. Điều này được hiểu rằng, khi một thiết bị không được truy cập vào mạng Internet, thì nhà cung cấp sẽ tận dụng IP này để cấp cho một người dùng khác.
 
@@ -240,29 +240,33 @@ Domain (hay tên miền) là địa chỉ độc nhất của một website trê
 
 Tên miền được cấu thành từ các ký tự và chữ số trong bảng chữ cái, kết hợp với TLD (Top-Level Domain) như .com, .net, .org, .vn,… Bên cạnh domain chính (main domain), bạn có thể tạo thêm subdomain để tổ chức website một cách hiệu quả.
 
-Thành phần của Domain
+### Thành phần của Domain
 
 https://    host247.      vietnix                .vn                  /webmail
 protocol    sub-domain    second level domain    top level domain     page-path
 
-Protocol là một tập hợp các quy tắc chuẩn cho phép hai hoặc các thực thể trong cùng một hệ thống để trao đổi thông tin liên lạc dữ liệu qua các kênh truyền thông.
+#### Protocol 
+là một tập hợp các quy tắc chuẩn cho phép hai hoặc các thực thể trong cùng một hệ thống để trao đổi thông tin liên lạc dữ liệu qua các kênh truyền thông.
 
 Các Protocol phổ biến: http, https, ftp,...
 
-Sub-domain cho phép bạn tổ chức và quản lý các phần khác nhau của trang web hoặc ứng dụng web dưới cùng một tên miền chính.
+#### Sub-domain
+cho phép bạn tổ chức và quản lý các phần khác nhau của trang web hoặc ứng dụng web dưới cùng một tên miền chính.
 
 Nếu bạn có tên miền chính là vietnix.vn bạn có thể tạo các sub-domain như blod.vietnix.vn, hoặc support.vietnix.vn.
 
 Mỗi sub-domain có thể trỏ đến một trang web hoặc phần cụ thể của trang.
 
-Second level domain (SLD) là phần tiếp theo của tên miền và thường là phần mà người dùng tuỳ chỉnh để xác định trang web hoặc dịch vụ của họ.
+#### Second level domain (SLD)
+là phần tiếp theo của tên miền và thường là phần mà người dùng tuỳ chỉnh để xác định trang web hoặc dịch vụ của họ.
 
 Ví dụ:
 
 - google trong google.com
 - vietnix trong vietnix.com
 
-Top level domain (TLD) là phần cuối cùng của tên miền và thường được quốc gia hoặc quản lý toàn cầu.
+#### Top level domain (TLD) 
+là phần cuối cùng của tên miền và thường được quốc gia hoặc quản lý toàn cầu.
 
 Ví dụ:
 
@@ -271,7 +275,8 @@ Ví dụ:
 - .net cho tên miền mạng lưới.
 - .vn cho tên miền quốc gia của Việt Nam.
 
-Pgae-Path là đường dẫn trang cho viết cách di chuyển trong cấu trúc trang web. Mỗi phần của đường dẫn trang thường thể hiện một thư mục hoặc một trang cụ thể trên trang web.
+#### Pgae-Path 
+là đường dẫn trang cho viết cách di chuyển trong cấu trúc trang web. Mỗi phần của đường dẫn trang thường thể hiện một thư mục hoặc một trang cụ thể trên trang web.
 
 Ví dụ:
 
@@ -322,12 +327,12 @@ DNS viết tắt của Domain Name System có nghĩa là hệ thống phân gi�
     
 DNS được phát minh vào năm 1984 cho Internet và đây là một trong số các chuẩn công nghiệp của các cổng bao gồm cả TCP/IP. Hệ thống phân giải tên miền chính là chìa khóa chủ chốt của nhiều dịch vụ mạng hiện nay như Internet, Mail server, Web server…
 
-Chức năng của DNS
+### Chức năng của DNS
 DNS đóng vai trò như một “biên dịch viên” giữa tên miền và địa chỉ IP. Tên miền là chuỗi ký tự dễ nhớ, trong khi địa chỉ IP là chuỗi số khó nhớ. DNS giúp chuyển đổi tên miền thành địa chỉ IP, từ đó giúp máy tính có thể truy cập vào các trang web trên internet.
 
 Mỗi máy tính khi kết nối vào Internet sẽ được gán cho 1 địa chỉ IP (Ví dụ: 1414.1158.62462) riêng biệt và không trùng lẫn với bất kỳ máy tính nào khác trên thế giới. Cũng giống như vậy đối với website cũng có địa chỉ IP riêng biệt của website đó.
 
-Cách thức hoạt động của DNS
+### Cách thức hoạt động của DNS
 
 - Khi người dùng truy cập một website, máy tính sẽ gửi yêu cầu đến máy chủ DNS cục bộ để tìm địa chỉ IP của website đó. Máy chủ DNS cục bộ sẽ kiểm tra cơ sở dữ liệu của mình xem có chứa địa chỉ IP của website hay không. Nếu có, sẽ trả về địa chỉ IP cho máy tính của người dùng.
 - Quá trình phân giải DNS bao gồm chuyển đổi tên máy chủ (chẳng hạn như www.example.com) thành địa chỉ IP thân thiện với máy tính (chẳng hạn như 192.168.1.1). Một địa chỉ IP được cung cấp cho mỗi thiết bị trên Internet và địa chỉ đó là cần thiết để tìm thiết bị Internet phù hợp. Giống như một địa chỉ đường phố được sử dụng để tìm một ngôi nhà cụ thể.
@@ -336,7 +341,7 @@ Cách thức hoạt động của DNS
 - Máy chủ DNS cấp cao nhất sẽ trả về địa chỉ IP của máy chủ DNS quản lý website. Máy chủ DNS quản lý sẽ trả về địa chỉ IP của trang web cho máy chủ DNS cục bộ.
 - Cuối cùng, máy chủ DNS cục bộ sẽ trả về địa chỉ IP của trang web cho máy tính của người dùng. Máy tính của người dùng sẽ sử dụng địa chỉ IP này để kết nối với website.
 
-Các loại DNS bản ghi DNS thường sử dụng
+### Các loại DNS bản ghi DNS thường sử dụng
 
 Hiện nay, DNS có bảy loại bản ghi, bao gồm:
 
@@ -348,7 +353,7 @@ Hiện nay, DNS có bảy loại bản ghi, bao gồm:
 - SRV Record: Đây là bản ghi DNS đặc biệt, dùng để xác định chính xác dịch vụ nào đang chạy Port nào. Và thông qua bản ghi này bạn có thể thêm Priority, Port, Weight, TTL, Point to Point.
 - NS Record: Bản ghi này có thể chỉ định Name Server cho từng tên miền phụ và bên cạnh đó có thể tạo tên Name Server, TTL hay host mới.
 
-Các loại DNS Server
+### Các loại DNS Server
 
 Root Name Server là một dịch vụ phân giải tên miền gốc và trên thế giới có khoảng 12 DNS root Server.
 
@@ -370,7 +375,7 @@ TLD Name Server là máy chủ tên miền cấp cao nhất, chịu trách nhi�
 Authoritative Name Server
 Authoritative Name Server lưu trữ thông tin về tên miền và địa chỉ IP tương ứng. Là điểm cuối của quá trình truy vấn và phân giải địa chỉ IP cần thiết cho DNS Recursor.
 
-Nguyên tác vận hành của DNS
+### Nguyên tác vận hành của DNS
 
 Về vận hành của DNS là gì sẽ có cơ chế hoạt động tương tự với hệ thống khách, nó cũng sẽ có những nguyên tắc hoạt động nhất định và muốn sử dụng được bạn bắt buộc phải hiểu được nguyên lý hoạt động.
 
@@ -383,7 +388,7 @@ Nội dung bên dưới sẽ đề cập khái quát về nguyên tắc làm vi�
 
 - Mỗi DNS server sẽ quản lý và chịu trách nhiệm phân giải tên miền từ các máy bên trong tên miền đến các địa chỉ internet mà nó quản lý. Ngoài ra, nó còn có trách nhiệm trả lời các yêu cầu từ các DNS server khác bên ngoài đang cố gắng phân giải tên miền mà nó quản lý. Tất cả các nhà cung cấp dịch vụ đều có hệ thống DNS riêng để đảm bảo an toàn và hiệu quả cho người dùng, và INTERNIC là tổ chức quản lý các tên miền và DNS server trên toàn thế giới.
 
-Cách phần giải địa chỉ DNS
+### Cách phần giải địa chỉ DNS
 
 Để hiểu được cơ chế hoạt động của DNS là gì bạn cần hiểu quy trình của một máy tính cá nhân khi muốn truy cập vào địa chỉ Vietnix.vn, cụ thể theo từng bước như sau: 
 
@@ -418,7 +423,7 @@ Bên cạnh đó, DKIM còn cso khả năng chặn các email giả mạo, đây
 ## SPF 
 SPF (Sender Policy Framework) là một cơ chế xác thực email được thiết kế để chống lại giả mạo địa chỉ email (email spoofing). SPF cho phép chủ sở hữu tên miền xác định các máy chủ email được phép gửi email cho tên miền của họ. Điều này giúp giảm thiểu khả năng email giả mạo và cải thiện bảo mật email.
 
-Nguyên Tắc Hoạt Động của SPF
+### Nguyên Tắc Hoạt Động của SPF
 
 1. Bản Ghi SPF:
 - SPF sử dụng một bản ghi TXT trong hệ thống DNS của tên miền để chỉ định các máy chủ hoặc địa chỉ IP hợp lệ có quyền gửi email cho tên miền đó. Ví dụ, bản ghi SPF có thể cho phép các máy chủ từ địa chỉ IP cụ thể hoặc các máy chủ DNS khác gửi email thay mặt cho tên miền.
@@ -433,7 +438,7 @@ Nguyên Tắc Hoạt Động của SPF
 - Neutral: Không có thông tin đầy đủ để xác định tính hợp lệ của địa chỉ IP.
 - None: Không có bản ghi SPF được cấu hình cho tên miền.
 
-Cấu Trúc Bản Ghi SPF
+### Cấu Trúc Bản Ghi SPF
 
 Bản ghi SPF là một bản ghi TXT trong DNS và có cấu trúc cơ bản như sau:
 
@@ -454,14 +459,14 @@ SPF giúp bảo vệ chống lại email giả mạo bằng cách cho phép ch�
 ## PTR
 PTR (Pointer Record) là một loại bản ghi DNS được sử dụng chủ yếu trong các hệ thống DNS ngược (reverse DNS lookup). PTR record giúp ánh xạ địa chỉ IP trở lại tên miền của nó, điều này thường được sử dụng để xác minh tính hợp lệ của địa chỉ IP trong các quy trình như kiểm tra email và bảo mật mạng.
 
-Nguyên Tắc Hoạt Động của PTR Record
+### Nguyên Tắc Hoạt Động của PTR Record
 
 1. Chuyển Đổi Địa Chỉ IP Thành Tên Miền:
 - PTR record cho phép bạn thực hiện chuyển đổi ngược từ địa chỉ IP về tên miền. Điều này ngược lại với bản ghi A (hoặc AAAA) thường dùng để ánh xạ tên miền đến địa chỉ IP.
 2. DNS Ngược (Reverse DNS Lookup):
 - Trong DNS ngược, thay vì tra cứu địa chỉ IP từ tên miền, bạn tra cứu tên miền từ địa chỉ IP. Điều này thường được sử dụng để kiểm tra tính hợp lệ của các địa chỉ IP khi máy chủ email gửi thư đến hoặc trong các quá trình bảo mật mạng.
 
-Cấu Trúc Bản Ghi PTR
+### Cấu Trúc Bản Ghi PTR
 
 Bản ghi PTR trong DNS có cấu trúc cơ bản như sau:
 
@@ -472,7 +477,7 @@ Bản ghi PTR trong DNS có cấu trúc cơ bản như sau:
 - PTR: Loại bản ghi.
 - <hostname>: Tên miền mà địa chỉ IP ánh xạ tới.
 
-Vai Trò và Tầm Quan Trọng
+### Vai Trò và Tầm Quan Trọng
 
 1. Xác Thực Email:
 - PTR records giúp xác minh rằng địa chỉ IP gửi email thực sự thuộc về tên miền mà nó tuyên bố. Điều này giúp chống lại các cuộc tấn công giả mạo và spam.
@@ -492,15 +497,15 @@ Colocation là dịch vụ cung cấp không gian để đặt máy chủ. Khi s
  
 Các nhà khai thác vị trí (colocation operator) cung cấp cho các tổ chức cơ sở trung tâm dữ liệu để chứa và vận hành máy chủ của họ. Colos thường cung cấp các vị trí vật lý cũng như các dịch vụ cấp nguồn, làm mát, mạng và bảo mật cho máy chủ của khách hàng.
 
-Ưu điểm của Datacenter
+### Ưu điểm của Datacenter
 Nói đến ưu điểm của trung tâm dữ liệu, không thể bỏ qua tính bảo mật thông tin của chúng. Khi doanh nghiệp sử dụng dịch vụ cung cấp chỗ đặt máy chủ, họ sẽ có không gian lưu trữ dữ liệu chuyên nghiệp và an toàn.
 
 Việc dùng đường truyền như xDSL hoặc PSTN/ISD là có thể sử dụng. Điều quan trọng là quy trình cài đặt không phức tạp và rất tiết kiệm thời gian. Với Datacenter, doanh nghiệp có thể giảm chi phí lưu trữ và quản lý dữ liệu một cách đáng kể. Đồng thời, hoạt động kinh doanh của công ty vẫn diễn ra một cách hiệu quả và thuận lợi.
 
-Cách hoạt động của trung tâm dữ liệu
+### Cách hoạt động của trung tâm dữ liệu
 Datacenter thường được coi là bộ não của công ty. Đây là nơi tất cả các quy trình quan trọng của một doanh nghiệp được chạy trên các máy chủ. Những dữ liệu quan trọng được xử lý, lưu trữ và tổ chức thành các packet để truyền. Đây là nơi các bộ định tuyến (router) xác định con đường tốt nhất để dữ liệu di chuyển. Bản thân datacenter được xây dựng với nhiều thiết bị được tích hợp khả năng phục hồi.
 
-Các thành phần của Datacenter
+### Các thành phần của Datacenter
 
 Một số thành phần bên trong các trung tâm dữ liệu như sau:
 
@@ -509,14 +514,14 @@ Một số thành phần bên trong các trung tâm dữ liệu như sau:
 - Công cụ và thiết bị IT hỗ trợ cho hoạt động lưu trữ dữ liệu và các công việc liên quan đến công nghệ thông tin khác cho doanh nghiệp.
 - Nhân viên điều hành, quản lý và giám sát mọi hoạt động của thiết bị và cơ sở hạ tầng trong trung tâm dữ liệu. Các Datacenter cần có nhân viên quan sát để đảm bảo rằng mọi thứ được vận hành đúng và liên tục.
 
-Vai trò của Datacenter
+### Vai trò của Datacenter
 Datacenter có vai trò tạo ra môi trường cho người dùng thuê không gian và các dịch vụ hỗ trợ khác mà không cần cài đặt phức tạp. Người dùng chỉ cần kết nối đến trung tâm cung cấp dữ liệu thông qua PSTN/ISD, xDSL,… Có thể thấy datacenter liên quan chặt chẽ đến tính bảo mật của hệ thống network. Vì vậy vấn đề bảo mật, an toàn và độ tin cậy của datacenter là một trong những ưu tiên hàng đầu của các đơn vị cung cấp.
 
 Nhu cầu về không gian lưu trữ, khả năng xử lý thông tin đang tăng lên theo cấp số nhân và các công ty cần phải có khả năng theo kịp để có thể cung cấp, đáp ứng nhu cầu của khách hàng. Trong nhiều trường hợp, các mô hình kinh doanh công ty hiện đại được xây dựng dựa trên trung tâm dữ liệu làm nền tảng hoặc “manufacturing plant” cho các dịch vụ mà công ty cung cấp.
 
 Chẳng hạn, các công ty như Facebook, Apple, eBay, Amazon và LinkedIn đều phụ thuộc vào các trung tâm dữ liệu để cung cấp các dịch vụ và sản phẩm cốt lõi cho khách hàng của họ. Nếu không có trung tâm dữ liệu, các doanh nghiệp không thể tồn tại hoặc tự đặt mình vào nguy cơ mất doanh thu và tác động tiêu cực đến sự hài lòng của khách hàng.
 
-Phân loại Datacenter
+### Phân loại Datacenter
 - Data Center doanh nghiệp (tại chỗ)
 - Data Center đám mây công cộng
 - Data Center nơi cho thuê chỗ đặt máy chủ
@@ -526,19 +531,19 @@ CPU được viết tắt từ Central Processing Unit – bộ xử lý trung t
 
 CPU còn được biết đến với những tên gọi khác như: Processor, Microprocessor, Central processor. Nhìn chung, CPU dùng để điều khiển tất cả hoạt động và được xem như đầu não của toàn hệ thống máy tính hoặc laptop. CPU sẽ xử lý các dữ kiện từ phần mềm hệ thống, phần mềm ứng dụng cho đến phần cứng đang hoạt động bình thường trên máy tính.
 
-Chức năng của CPU
+### Chức năng của CPU
 
 CPU chủ yếu đảm nhận nhiệm vụ xử lý tất cả các chương trình trên máy tính. CPU không chỉ xử lý dữ liệu đầu vào mà còn thực hiện mọi lệnh được gửi đến thông qua phần mềm hoặc phần cứng đang hoạt động trên máy tính. Nói dễ hiểu hơn, CPU có nhiệm vụ chính là nhận thông tin từ các thiết bị ngoại vi hoặc chương trình máy tính, sau đó phân tích và thực hiện các tác vụ cần thiết, bao gồm hiển thị thông tin lên màn hình và thực hiện các yêu cầu của các thiết bị ngoại vi.
 
-CPU của hosting
+### CPU của hosting
 CPU của hosting là thông số của CPU, là % CPU đang sử dụng của gói hosting. Thông thường gói CPU của hosting dao động từ 75% – 3000%. Thông số này càng cao thì khả năng xử lý của hosting càng mạnh.
 
-Cách CPU làm việc
+### Cách CPU làm việc
 CPU là gì đã được giải thích đơn giản như trên, vậy cách mà bộ xử lý trung tâm hoạt động là như thế nào? Một CPU sẽ có nhiệm vụ chính là điều khiển toàn bộ cơ chế làm việc của máy tính theo thuật toán và thao tác người dùng.
 
 CPU sẽ nhận thông tin từ những thiết bị ngoại vi bao gồm: Chuột, máy in, bàn phím,… đồng thời kết hợp với chương trình đã lập trình trên máy tính và xử lý thông qua các phân tích phép tính, logic, so sánh để xuất kết quả ra màn hình. Ngoài ra, những yêu cầu từ thiết bị ngoại vi cũng được xử lý nhanh chóng.
 
-Cấu tạo của CPU gồm 
+### Cấu tạo của CPU gồm 
 Về cơ bản CPU có nghĩa là bộ xử lý trung tâm, thế nên nó sẽ là sự kết hợp của nhiều chi tiết với công dụng khác nhau. Dưới đây là 5 bộ phận cấu tạo hoàn chỉnh của mỗi chiếc CPU mà Vietnix đã tổng hợp.
 
 - Khối điều khiển (CU – Control Unit)
@@ -573,7 +578,7 @@ RAM đóng vai trò tất yếu ở hầu hết thiết bị điện tử có th
 
 ROM là viết tắt của Read Only Memory, có nghĩa là bộ nhớ chỉ đọc. Đây là loại bộ nhớ không khả biến được sử dụng trong các thiết bị tính và hệ thống điều khiển, nơi mà dữ liệu chỉ có thể được đọc mà không thể ghi. Bộ nhớ ROM chứa các chương trình quan trọng giúp khởi động máy tính và nếu thiếu thành phần này, máy tính sẽ không hoạt động được.
 
-Cấu tạo của RAM
+### Cấu tạo của RAM
 
 Với chức năng vô cùng quan trọng trong thiết bị, RAM sẽ được cấu tạo từ nhiều bộ phận khác nhau để tạo ra hiệu năng tối ưu. Trong đó, 5 bộ phận gồm bo mạch, chip SPD, vi xử lý, bộ đếm, ngân hàng bộ nhớ. Chi tiết các bộ phận như sau:
 
@@ -597,7 +602,7 @@ Với mục đích nâng cao tốc độ truy cập cụm, các bộ đếm trê
 
 Một thành phần không thể thiếu của RAM là ngân hàng bộ nhớ. Bộ phận này bao hàm những mô đun lưu trữ thông tin. SDRAM sẽ có tối thiểu 2 ngân hàng bộ nhớ hoặc nhiều hơn thế nữa, đồng thời còn cấp quyền cho một đối tượng bất kỳ truy cập vào các ngân hàng khác.
 
-Cơ chế hoạt động của RAM
+### Cơ chế hoạt động của RAM
 
 RAM hoạt động như một trung gian luân chuyển dữ liệu giữa ổ cứng và CPU. Cơ chế hoạt động cụ thể của RAM như sau:
 
@@ -609,7 +614,7 @@ Hiểu đơn giản, chức năng của RAM trong máy tính hay điện thoại
 
 Ngược lại nếu trí nhớ ngắn hạn tốt thì bạn có thể nhớ được nhiều thông tin hơn để phục vụ cho các hoạt động trong ngày. Tương tự, RAM giúp lưu trữ dữ liệu tạm thời cho hệ điều hành và các ứng dụng đang chạy. RAM càng nhiều thì máy tính, điện thoại của bạn sẽ càng có thể chạy nhiều ứng dụng cùng lúc và hoạt động mượt mà hơn.
 
-Các loại RAM phổ biến
+### Các loại RAM phổ biến
 
 RAM được phân chia thành hai loại, đó là SRAM và DRAM. SRAM, hay còn được biết đến là RAM tĩnh – không mất dữ liệu sau khi máy tính được khởi động và thường được sử dụng để lưu trữ thông tin khởi động. Ngược lại là DRAM – RAM động, được sử dụng để tạm thời lưu trữ dữ liệu khi ứng dụng đang chạy và có thể bị giải phóng vùng nhớ khi ứng dụng đóng, máy tính tắt hoặc điện thoại tắt.
 
@@ -629,7 +634,7 @@ Có 6 loại RAM động:
 
 SSL (Secure Sockets Layer) là một giao thức bảo mật được thiết kế để mã hóa dữ liệu giữa trình duyệt web và máy chủ web. SSL giúp bảo vệ dữ liệu nhạy cảm (như thông tin đăng nhập, dữ liệu thẻ tín dụng) khỏi bị nghe lén hoặc can thiệp trong quá trình truyền tải. SSL đã được thay thế bởi TLS (Transport Layer Security), nhưng thuật ngữ SSL vẫn thường được sử dụng để chỉ các chứng chỉ bảo mật và giao thức hiện tại.
 
-Có ba phương pháp chính để chứng thực SSL:
+### Có ba phương pháp chính để chứng thực SSL:
 
 1. Chứng thực với Chứng chỉ (Certificate-based Authentication):
 - Đây là phương pháp phổ biến nhất, trong đó máy chủ sử dụng chứng chỉ SSL để mã hóa dữ liệu và xác thực danh tính của nó. Khi trình duyệt kết nối đến máy chủ, máy chủ sẽ gửi chứng chỉ SSL và trình duyệt sẽ kiểm tra chứng chỉ đó.
@@ -640,7 +645,8 @@ Có ba phương pháp chính để chứng thực SSL:
 3. Chứng thực với Doanh nghiệp (Organization-based Authentication):
 - Phương pháp này cung cấp mức độ bảo mật cao hơn bằng cách xác minh không chỉ tên miền mà còn thông tin về tổ chức hoặc doanh nghiệp yêu cầu chứng chỉ. Các chứng chỉ này thường được gọi là Extended Validation (EV) SSL Certificates.
 
-CSR (Certificate Signing Request) là một tệp được tạo ra bởi máy chủ yêu cầu chứng chỉ SSL. Tệp CSR chứa các thông tin quan trọng cần thiết để cấp chứng chỉ SSL, bao gồm:
+### CSR (Certificate Signing Request) 
+là một tệp được tạo ra bởi máy chủ yêu cầu chứng chỉ SSL. Tệp CSR chứa các thông tin quan trọng cần thiết để cấp chứng chỉ SSL, bao gồm:
 
 - Tên miền hoặc tên tổ chức.
 - Tên tổ chức (nếu có).
@@ -650,7 +656,7 @@ CSR (Certificate Signing Request) là một tệp được tạo ra bởi máy c
 
 Quá trình tạo chứng chỉ SSL thường bao gồm việc tạo CSR, sau đó gửi CSR đến CA (Certificate Authority) để yêu cầu cấp chứng chỉ SSL. CA sử dụng thông tin trong CSR để tạo chứng chỉ SSL hợp lệ.
 
-Sử dụng OpenSSL để gen file CSR sau đó request SSL cho domain tech.training.vietnix.tech
+### Sử dụng OpenSSL để gen file CSR sau đó request SSL cho domain tech.training.vietnix.tech
 
 #Tạo private key
 openssl genpkey -algorithm RSA -out tech.training.vietnix.tech.key -aes256
@@ -660,13 +666,16 @@ openssl req -new -key tech.training.vietnix.tech.key -out tech.training.vietnix.
 
 Quá trình tạo CSR sẽ yêu cầu bạn nhập thông tin liên quan đến chứng chỉ. Tệp tech.training.vietnix.tech.csr sau đó có thể được gửi đến CA để yêu cầu chứng chỉ SSL.
 
-PEM (Privacy-Enhanced Mail) là định dạng tệp thường được sử dụng để lưu trữ chứng chỉ SSL, khóa riêng (private key), và các dữ liệu bảo mật khác. Tệp PEM thường có đuôi .pem, .crt, .cer, hoặc .key và chứa dữ liệu được mã hóa bằng Base64 giữa các đoạn tiêu đề như -----BEGIN CERTIFICATE----- và -----END CERTIFICATE-----.
+### PEM (Privacy-Enhanced Mail) 
+là định dạng tệp thường được sử dụng để lưu trữ chứng chỉ SSL, khóa riêng (private key), và các dữ liệu bảo mật khác. Tệp PEM thường có đuôi .pem, .crt, .cer, hoặc .key và chứa dữ liệu được mã hóa bằng Base64 giữa các đoạn tiêu đề như -----BEGIN CERTIFICATE----- và -----END CERTIFICATE-----.
 
-Private Key (Khóa Riêng) là một phần của cặp khóa được sử dụng trong mã hóa SSL/TLS. Khóa riêng được giữ bí mật và không được chia sẻ với bất kỳ ai ngoài tổ chức yêu cầu chứng chỉ. Nó được sử dụng để giải mã dữ liệu mà khóa công khai (public key) đã mã hóa và để ký các yêu cầu chứng chỉ (CSR). Việc bảo mật khóa riêng là rất quan trọng để đảm bảo an toàn cho kết nối SSL.
+### Private Key (Khóa Riêng) 
+là một phần của cặp khóa được sử dụng trong mã hóa SSL/TLS. Khóa riêng được giữ bí mật và không được chia sẻ với bất kỳ ai ngoài tổ chức yêu cầu chứng chỉ. Nó được sử dụng để giải mã dữ liệu mà khóa công khai (public key) đã mã hóa và để ký các yêu cầu chứng chỉ (CSR). Việc bảo mật khóa riêng là rất quan trọng để đảm bảo an toàn cho kết nối SSL.
 
-PFX (Personal Information Exchange) là định dạng tệp chứa chứng chỉ SSL, khóa riêng (private key), và các chứng chỉ trung gian (intermediate certificates) trong một tệp duy nhất. PFX, thường có đuôi .pfx hoặc .p12, cho phép bạn xuất và nhập các chứng chỉ SSL cùng với khóa riêng.
+### PFX (Personal Information Exchange)
+là định dạng tệp chứa chứng chỉ SSL, khóa riêng (private key), và các chứng chỉ trung gian (intermediate certificates) trong một tệp duy nhất. PFX, thường có đuôi .pfx hoặc .p12, cho phép bạn xuất và nhập các chứng chỉ SSL cùng với khóa riêng.
 
-Cách chuyển từ file crt file sang PFX file.
+### Cách chuyển từ file crt file sang PFX file.
 
 Để chuyển từ file .crt (hoặc .pem) và khóa riêng (.key) sang tệp PFX, bạn có thể sử dụng lệnh OpenSSL sau:
 
