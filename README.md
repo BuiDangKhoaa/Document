@@ -20,6 +20,49 @@ Nhà cung cấp sẽ tiến hành cấu hình và chia nhỏ dịch vụ hosting
 
 Về phía người sử dụng hosting, họ chỉ cần tiến hành upload các file và dữ liệu liên quan lên không gian lưu trữ của mình sau đó cấu hình hoạt động cho phù hợp. Thông thường, web hosting sẽ được thuê để lưu trữ các trang web. Trong trường hợp này, người thuê sẽ tiến hành xây dựng trang web và điều chỉnh để website phù hợp với mục đích ban đầu, có thể là kinh doanh, blog, tin tức,…
 
+## Virtual Hosts
+
+Virtual Host là một dạng lưu trữ mà bạn lưu được nhiều domain khác nhau trên cùng một máy chủ serer. Hiện nay Virtual host được xem là một giải pháp tiết chi phí vì nó cho phép bặn nhúng nhiều domain trên một địa chỉ IP trong một Server. Server sẽ tự động hiểu tên miền nào đang vận hành bên trong vị trí lưu trữ Server tuỳ theo cách cài đặt của bạn.
+
+Virtual Hosts được xem là một giải pháp tối ưu vừa tiết kiệm chi phí vừa được trải nghiệm tốt khi sử dụng nhiều tên miền chỉ trên một địa chỉ IP của Server. Bên cạnh đó, Virtual Hosting còn mang đến khá nhiều lợi ích trong quá trình sử dụng như:
+
+- Bạn có thể dễ dàng thao tác vào một thư mục lưu trữ Code nào và không phải copy Code vào htdocs trong giao diện XAMPP.
+- Trong quá trình thiết lập ban đầu, nếu bạn phân vùng lưu trữ Code ở một Folder Code nhất định, thì bạn sẽ không tốn thời gian sao lưu lại dữ liệu trong Folder Code khi cài đặt lại hệ điều hành Window.
+
+Cách thức vận hành của Virtual Host
+
+Có nhiều cách khác nhau để xác định cấu hình của một Virtual Host, nhưng cách được sử dụng thông dụng ngày nay là:
+
+- IP Based.
+- Port – Based.
+- Name Based.
+
+IP Based
+
+IP-Based Virtual Hosts (xác định website dựa theo IP): Đây là phương pháp đơn giản nhất trong 3 phương pháp, Một IP sử dụng cho 1 Website. Máy chủ web sẽ chịu trách nhiệm ánh xạ IP được yêu cầu có đế đến đúng website mong muốn hay không. Vì thế, mỗi trang web sẽ được định nghĩa bởi 1 IP duy nhất nhằm tránh những vấn đề không đáng có cho trang web liên quan đến địa chỉ IP. Tuy nhiên IP-Based (dùng trên 1 máy chủ) cần thiết lập Virtual Interface trên 1 máy chủ để có thể sử dụng được nhiều IP.
+
+Port Based
+
+Port Based tương đương với IP-Based, nhưng sự khác biệt ở phương thức này là có thể quản lý nhiều trang web dựa theo số Port được định nghĩa cùng với IP hoặc tên miền. Ngoài ra, Port sử dụng tránh lặp lại với Port được mặc định của ứng dụng khác khi đang hoạt động.
+
+Name Based
+
+Name Based (xác định website dựa theo tên – Domain Name): Nhiều website sử dụng chung 1 IP. Server sẽ đối chiếu http header từ client yêu cầu để ánh xạ đến đúng website được chỉ định theo Domain. Cho nên, Name-Based rất được ưa thích trong việc quản lý nhiều trang web trên cùng 1 máy chủ và trước tình trạng thế giới đang dần cạn kiệt IP Public, đồng thời sử dụng tối đa tài nguyên hiện có. Hạn chế lớn nhất khi bạn dùng IP chung, nếu gặp vấn đề thì tất cả các trang web của bạn đều sẽ bị ảnh hưởng theo.
+
+    
+## SEO Hositng 
+
+SEO Hosting là giải pháp hosting được tạo rả giúp cho các website cần tối ưu SEO
+
+Mỗi tài khoản hosting sẽ có nhiều địa chỉ IP giúp chạy nhiều website trên cùng một tài khoản và các website sẽ có range IP khác nhau, không bị Google footprint.
+
+## Email hositng
+
+Email hosting là một dịch vụ trong đó nhà cung cấp dịch vụ hosting thuê các email server cho người dùng của mình.
+
+Doanh nghiệp lớn thường chạy các dịch vụ email hosting theo tên miền của họ để tăng độ uy tín và chuyên nghiệp.
+
+
 ## VPS
 VPS (Virtual Private Server) hay máy chủ ảo riêng, là một loại dịch vụ lưu trữ web phân vùng máy chủ vật lý thành nhiều máy ảo, mỗi máy có tài nguyên chuyên dụng riêng, bao gồm CPU, RAM, bộ lưu trữ và hệ điều hành. Công nghệ ảo hóa này cho phép mỗi VPS có thể hoạt động độc lập, cung cấp cho người dùng những lợi ích to lớn như khả năng kiểm soát và tính linh hoạt cao hơn so với dịch vụ Shared hosting.
 
@@ -197,6 +240,44 @@ Domain (hay tên miền) là địa chỉ độc nhất của một website trê
 
 Tên miền được cấu thành từ các ký tự và chữ số trong bảng chữ cái, kết hợp với TLD (Top-Level Domain) như .com, .net, .org, .vn,… Bên cạnh domain chính (main domain), bạn có thể tạo thêm subdomain để tổ chức website một cách hiệu quả.
 
+Thành phần của Domain
+
+https://    host247.      vietnix                .vn                  /webmail
+protocol    sub-domain    second level domain    top level domain     page-path
+
+Protocol là một tập hợp các quy tắc chuẩn cho phép hai hoặc các thực thể trong cùng một hệ thống để trao đổi thông tin liên lạc dữ liệu qua các kênh truyền thông.
+
+Các Protocol phổ biến: http, https, ftp,...
+
+Sub-domain cho phép bạn tổ chức và quản lý các phần khác nhau của trang web hoặc ứng dụng web dưới cùng một tên miền chính.
+
+Nếu bạn có tên miền chính là vietnix.vn bạn có thể tạo các sub-domain như blod.vietnix.vn, hoặc support.vietnix.vn.
+
+Mỗi sub-domain có thể trỏ đến một trang web hoặc phần cụ thể của trang.
+
+Second level domain (SLD) là phần tiếp theo của tên miền và thường là phần mà người dùng tuỳ chỉnh để xác định trang web hoặc dịch vụ của họ.
+
+Ví dụ:
+
+- google trong google.com
+- vietnix trong vietnix.com
+
+Top level domain (TLD) là phần cuối cùng của tên miền và thường được quốc gia hoặc quản lý toàn cầu.
+
+Ví dụ:
+
+- .com cho tên miền thương mại.
+- .org cho tên miền tổ chức phi lợi nhuận.
+- .net cho tên miền mạng lưới.
+- .vn cho tên miền quốc gia của Việt Nam.
+
+Pgae-Path là đường dẫn trang cho viết cách di chuyển trong cấu trúc trang web. Mỗi phần của đường dẫn trang thường thể hiện một thư mục hoặc một trang cụ thể trên trang web.
+
+Ví dụ:
+
+/webmail có thể đại diện cho một thư mục hoặc chủ đề cụ thể trên trang web
+
+
 Đây là ví dụ minh họa cho sự khác nhau giữa địa chỉ URL (Uniform Resource Locator) và một tên miền:
 
 URL: https://vietnix.vn/domain-la-gi/
@@ -289,6 +370,118 @@ TLD Name Server là máy chủ tên miền cấp cao nhất, chịu trách nhi�
 Authoritative Name Server
 Authoritative Name Server lưu trữ thông tin về tên miền và địa chỉ IP tương ứng. Là điểm cuối của quá trình truy vấn và phân giải địa chỉ IP cần thiết cho DNS Recursor.
 
+Nguyên tác vận hành của DNS
+
+Về vận hành của DNS là gì sẽ có cơ chế hoạt động tương tự với hệ thống khách, nó cũng sẽ có những nguyên tắc hoạt động nhất định và muốn sử dụng được bạn bắt buộc phải hiểu được nguyên lý hoạt động.
+
+Nội dung bên dưới sẽ đề cập khái quát về nguyên tắc làm việc DNS Server cụ thể như sau: 
+
+- Mỗi nhà cung cấp dịch vụ sẽ có hệ thống DNS riêng để phân giải tên miền của mình trên Internet và đảm bảo cho người dùng có thể truy cập vào các trang web của doanh nghiệp nhanh chóng nhất.
+- Khi người dùng truy cập vào một trang web, DNS server sẽ phân giải tên miền của website đó tại chính tổ chức quản lý website, không phải ở các tổ chức hay nhà cung cấp dịch vụ khác.
+
+- INTERNIC là tổ chức được thành lập với mục đích đăng ký tên miền của internet và theo dõi các DNS server tương ứng. Tuy nhiên, INTERNIC không thực hiện phân giải tên miền mà chỉ quản lý tất cả các DNS trên server. DNS có khả năng truy vấn các DNS Server khác để có được tên miền đã được phân giải, và nó có hai chức năng chính là phân giải tên miền và trả lời các yêu cầu của các DNS server khác.
+
+- Mỗi DNS server sẽ quản lý và chịu trách nhiệm phân giải tên miền từ các máy bên trong tên miền đến các địa chỉ internet mà nó quản lý. Ngoài ra, nó còn có trách nhiệm trả lời các yêu cầu từ các DNS server khác bên ngoài đang cố gắng phân giải tên miền mà nó quản lý. Tất cả các nhà cung cấp dịch vụ đều có hệ thống DNS riêng để đảm bảo an toàn và hiệu quả cho người dùng, và INTERNIC là tổ chức quản lý các tên miền và DNS server trên toàn thế giới.
+
+Cách phần giải địa chỉ DNS
+
+Để hiểu được cơ chế hoạt động của DNS là gì bạn cần hiểu quy trình của một máy tính cá nhân khi muốn truy cập vào địa chỉ Vietnix.vn, cụ thể theo từng bước như sau: 
+
+Bước 1: Khi bạn sẽ truy cập vào website của Vietnix.vn bằng máy tính cá nhân, lúc này máy client sẽ gửi đến yêu cầu tìm địa chỉ IP của tên miền  Vietnix.vn đến máy chủ tên miền cục bộ. 
+
+Bước 2: Tiếp tục, máy chủ miền cục bộ sẽ thực hiện rà soát các cơ sở dữ liệu để xem có những thông tin vào khác có tương ứng IP  tên miền “Vietnix.vn” nữa không? Nếu không thì sẽ nhanh chóng trả IP của Vietnix.vn cho máy Client. 
+
+Trường hợp, nếu sau khi rà soát và không phát hiện cơ sở dữ liệu có liên quan đến miền Vietnix.vn máy chủ miền cục bộ sẽ tiếp tục gửi yêu cầu đến ROOT Name Server. 
+
+Bước 3: Tuy nhiên, Root Name Server không chứa thông tin về địa chỉ IP của Vietnix.vn, mà chỉ chứa thông tin về máy chủ quản lý tên miền của Việt Nam (.vn).
+
+Khi đó Root Name Server sẽ gửi thông tin về địa chỉ máy chủ quản lý tên miền .vn cho máy chủ tên miền cục bộ.
+
+Bước 4: Lúc này, máy chủ tên miền cục bộ sau đó sẽ gửi yêu cầu tìm kiếm đến máy chủ quản lý tên miền .vn để tìm địa chỉ IP của Vietnix.vn.
+
+Máy chủ quản lý tên miền .vn có cơ sở dữ liệu chứa thông tin về tất cả các tên miền .vn, bao gồm cả Vietnix.vn. Vì vậy, máy chủ quản lý tên miền .vn sẽ trả lại địa chỉ IP của Vietnix.vn cho máy chủ tên miền cục bộ.
+
+Bước 5: Bởi vì máy chủ quản lý tên miền VN có chứa cơ sở dữ liệu của tất cả các website có đuôi .vn (Tức là miền .vn) nên sẽ trả lại địa chỉ IP tên miền Vietnix cho máy chủ tên miền cục bộ. 
+
+Bước 6: Cuối cùng máy chủ tên miền cục bộ sẽ gửi thông tin về tên miền Vietnix đến máy Client, sau đó client sẽ tiếp tục sử dụng ip vừa được cấp để truy cập tới máy  Server Vietnix.vn. 
+
+## DKIM
+DKIM là viết tắt của DomainKeys Indentified Mail - một phương thức giúp xác nhận Email thông qua chữ ký số giúp tránh email giả mạo. Một kỹ thuật thươngf được sử dụng trong lừa đảo và spapm email.
+
+DKIM cho phép người nhận kiểm tra xem email được xác nhận từ một tên miền cụ thể có thực sự được chủ sở hữu uy quyền hay không? Nó sẽ gắn chữ ký điện tử, được liên kết với tên miền vào mỗi email gửi đi. Hệ thống người nhận có thể xác minh điều này bằng cách tra cứu mã khóa công khai (Public-key cryptography) của người gửi được xuất bản trong DNS.
+
+Bên cạnh đó, DKIM còn cso khả năng chặn các email giả mạo, đây là chức năng được sử dụng nhiều hiện nay. Đối với các thư với mục đích giả mạo, lừa đảo, email spam chứa các mã độc….
+
+- Khóa công khai thường được công bố trên DNS với dưới dạng TXT record.
+- Khi gửi email, chữ ký sẽ được chèn lên đầu với trường DKIM-Signature.
+
+## SPF 
+SPF (Sender Policy Framework) là một cơ chế xác thực email được thiết kế để chống lại giả mạo địa chỉ email (email spoofing). SPF cho phép chủ sở hữu tên miền xác định các máy chủ email được phép gửi email cho tên miền của họ. Điều này giúp giảm thiểu khả năng email giả mạo và cải thiện bảo mật email.
+
+Nguyên Tắc Hoạt Động của SPF
+
+1. Bản Ghi SPF:
+- SPF sử dụng một bản ghi TXT trong hệ thống DNS của tên miền để chỉ định các máy chủ hoặc địa chỉ IP hợp lệ có quyền gửi email cho tên miền đó. Ví dụ, bản ghi SPF có thể cho phép các máy chủ từ địa chỉ IP cụ thể hoặc các máy chủ DNS khác gửi email thay mặt cho tên miền.
+
+2. Kiểm Tra SPF:
+- Khi một máy chủ email nhận một email, nó sẽ kiểm tra bản ghi SPF của tên miền người gửi (domain sender) để xác định liệu địa chỉ IP của máy chủ gửi email có được phép gửi email cho tên miền đó hay không.
+
+3. Kết Quả SPF:
+- Pass: Địa chỉ IP của máy chủ gửi email nằm trong danh sách được phép, và email được gửi từ một nguồn hợp lệ.
+- Fail: Địa chỉ IP của máy chủ gửi email không nằm trong danh sách được phép, và email có thể bị xem là giả mạo.
+- Softfail: Địa chỉ IP không nằm trong danh sách, nhưng không hoàn toàn từ chối email. Email có thể được đánh dấu là nghi ngờ.
+- Neutral: Không có thông tin đầy đủ để xác định tính hợp lệ của địa chỉ IP.
+- None: Không có bản ghi SPF được cấu hình cho tên miền.
+
+Cấu Trúc Bản Ghi SPF
+
+Bản ghi SPF là một bản ghi TXT trong DNS và có cấu trúc cơ bản như sau:
+
+v=spf1 [mechanisms] [modifiers]
+
+- v=spf1: Phiên bản của SPF.
+- Mechanisms: Các điều kiện để xác định địa chỉ IP hợp lệ. Ví dụ:
+
+    - ip4:<IP_ADDRESS>: Cho phép một địa chỉ IP cụ thể.
+    - ip6:<IP_ADDRESS>: Cho phép một địa chỉ IP IPv6 cụ thể.
+    - a: Cho phép bất kỳ địa chỉ IP nào liên kết với tên miền của bản ghi A.
+    - mx: Cho phép bất kỳ địa chỉ IP nào liên kết với bản ghi MX của tên miền.
+    - include:<DOMAIN>: Bao gồm các quy tắc SPF từ tên miền khác.
+    - all: Xác định cách xử lý tất cả các địa chỉ IP không được liệt kê rõ ràng.
+
+SPF giúp bảo vệ chống lại email giả mạo bằng cách cho phép chủ sở hữu tên miền xác định các máy chủ email hợp lệ. Khi kết hợp với các cơ chế xác thực email khác như DKIM (DomainKeys Identified Mail) và DMARC (Domain-based Message Authentication, Reporting, and Conformance), SPF tạo ra một lớp bảo mật mạnh mẽ cho hệ thống email.
+
+## PTR
+PTR (Pointer Record) là một loại bản ghi DNS được sử dụng chủ yếu trong các hệ thống DNS ngược (reverse DNS lookup). PTR record giúp ánh xạ địa chỉ IP trở lại tên miền của nó, điều này thường được sử dụng để xác minh tính hợp lệ của địa chỉ IP trong các quy trình như kiểm tra email và bảo mật mạng.
+
+Nguyên Tắc Hoạt Động của PTR Record
+
+1. Chuyển Đổi Địa Chỉ IP Thành Tên Miền:
+- PTR record cho phép bạn thực hiện chuyển đổi ngược từ địa chỉ IP về tên miền. Điều này ngược lại với bản ghi A (hoặc AAAA) thường dùng để ánh xạ tên miền đến địa chỉ IP.
+2. DNS Ngược (Reverse DNS Lookup):
+- Trong DNS ngược, thay vì tra cứu địa chỉ IP từ tên miền, bạn tra cứu tên miền từ địa chỉ IP. Điều này thường được sử dụng để kiểm tra tính hợp lệ của các địa chỉ IP khi máy chủ email gửi thư đến hoặc trong các quá trình bảo mật mạng.
+
+Cấu Trúc Bản Ghi PTR
+
+Bản ghi PTR trong DNS có cấu trúc cơ bản như sau:
+
+<reversed IP>.in-addr.arpa. IN PTR <hostname>.
+
+- <reversed IP>: Địa chỉ IP được đảo ngược. Ví dụ, địa chỉ IP 192.168.1.1 sẽ được viết ngược thành 1.1.168.192.
+- in-addr.arpa: Tên miền cơ sở cho tra cứu DNS ngược.
+- PTR: Loại bản ghi.
+- <hostname>: Tên miền mà địa chỉ IP ánh xạ tới.
+
+Vai Trò và Tầm Quan Trọng
+
+1. Xác Thực Email:
+- PTR records giúp xác minh rằng địa chỉ IP gửi email thực sự thuộc về tên miền mà nó tuyên bố. Điều này giúp chống lại các cuộc tấn công giả mạo và spam.
+
+2. Bảo Mật Mạng:
+- PTR records có thể được sử dụng trong các hệ thống bảo mật để đảm bảo rằng các địa chỉ IP và tên miền tương ứng là hợp lệ và đáng tin cậy.
+
+PTR records đóng vai trò quan trọng trong việc xác minh tính hợp lệ của địa chỉ IP và tên miền trong các hệ thống DNS ngược. Chúng thường được sử dụng trong các quy trình bảo mật mạng và kiểm tra email để đảm bảo tính chính xác và độ tin cậy của các kết nối mạng.
+        
 ## Datacenteratacenter
 Datacenter (hay còn gọi là trung tâm dữ liệu) là nơi chứa hệ thống máy tính hoặc máy chủ và các tài nguyên công nghệ với mật độ cao, chẳng hạn như hệ thống lưu trữ (storage systems) và truyền thông mạng (network communications).
 
@@ -434,49 +627,60 @@ Có 6 loại RAM động:
 
 ## SSL
 
-SSL là gì ?
+SSL (Secure Sockets Layer) là một giao thức bảo mật được thiết kế để mã hóa dữ liệu giữa trình duyệt web và máy chủ web. SSL giúp bảo vệ dữ liệu nhạy cảm (như thông tin đăng nhập, dữ liệu thẻ tín dụng) khỏi bị nghe lén hoặc can thiệp trong quá trình truyền tải. SSL đã được thay thế bởi TLS (Transport Layer Security), nhưng thuật ngữ SSL vẫn thường được sử dụng để chỉ các chứng chỉ bảo mật và giao thức hiện tại.
 
-Có bao nhiêu cách chứng thực SSL ?
+Có ba phương pháp chính để chứng thực SSL:
 
-CSR file dùng làm gì trong quá trình tạo SSL
+1. Chứng thực với Chứng chỉ (Certificate-based Authentication):
+- Đây là phương pháp phổ biến nhất, trong đó máy chủ sử dụng chứng chỉ SSL để mã hóa dữ liệu và xác thực danh tính của nó. Khi trình duyệt kết nối đến máy chủ, máy chủ sẽ gửi chứng chỉ SSL và trình duyệt sẽ kiểm tra chứng chỉ đó.
+
+2. Chứng thực với Tên miền (Domain-based Authentication):
+- Phương pháp này xác thực rằng người yêu cầu chứng chỉ là chủ sở hữu của tên miền. Quy trình này thường bao gồm việc kiểm tra thông tin tên miền và có thể yêu cầu xác nhận qua email hoặc các phương pháp khác.
+
+3. Chứng thực với Doanh nghiệp (Organization-based Authentication):
+- Phương pháp này cung cấp mức độ bảo mật cao hơn bằng cách xác minh không chỉ tên miền mà còn thông tin về tổ chức hoặc doanh nghiệp yêu cầu chứng chỉ. Các chứng chỉ này thường được gọi là Extended Validation (EV) SSL Certificates.
+
+CSR (Certificate Signing Request) là một tệp được tạo ra bởi máy chủ yêu cầu chứng chỉ SSL. Tệp CSR chứa các thông tin quan trọng cần thiết để cấp chứng chỉ SSL, bao gồm:
+
+- Tên miền hoặc tên tổ chức.
+- Tên tổ chức (nếu có).
+- Địa chỉ email liên hệ.
+- Thông tin địa lý (thành phố, quốc gia).
+- Khóa công khai (public key) để mã hóa thông tin.
+
+Quá trình tạo chứng chỉ SSL thường bao gồm việc tạo CSR, sau đó gửi CSR đến CA (Certificate Authority) để yêu cầu cấp chứng chỉ SSL. CA sử dụng thông tin trong CSR để tạo chứng chỉ SSL hợp lệ.
 
 Sử dụng OpenSSL để gen file CSR sau đó request SSL cho domain tech.training.vietnix.tech
 
-Pem file là gì ?
+#Tạo private key
+openssl genpkey -algorithm RSA -out tech.training.vietnix.tech.key -aes256
 
-Private key ssl là gì ?
+#Tạo CSR
+openssl req -new -key tech.training.vietnix.tech.key -out tech.training.vietnix.tech.csr
 
-PFX file là gì ? Cách chuyển từ file crt file sang PFX file.
+Quá trình tạo CSR sẽ yêu cầu bạn nhập thông tin liên quan đến chứng chỉ. Tệp tech.training.vietnix.tech.csr sau đó có thể được gửi đến CA để yêu cầu chứng chỉ SSL.
 
+PEM (Privacy-Enhanced Mail) là định dạng tệp thường được sử dụng để lưu trữ chứng chỉ SSL, khóa riêng (private key), và các dữ liệu bảo mật khác. Tệp PEM thường có đuôi .pem, .crt, .cer, hoặc .key và chứa dữ liệu được mã hóa bằng Base64 giữa các đoạn tiêu đề như -----BEGIN CERTIFICATE----- và -----END CERTIFICATE-----.
 
-Domain
+Private Key (Khóa Riêng) là một phần của cặp khóa được sử dụng trong mã hóa SSL/TLS. Khóa riêng được giữ bí mật và không được chia sẻ với bất kỳ ai ngoài tổ chức yêu cầu chứng chỉ. Nó được sử dụng để giải mã dữ liệu mà khóa công khai (public key) đã mã hóa và để ký các yêu cầu chứng chỉ (CSR). Việc bảo mật khóa riêng là rất quan trọng để đảm bảo an toàn cho kết nối SSL.
 
-Domain là gì ?
+PFX (Personal Information Exchange) là định dạng tệp chứa chứng chỉ SSL, khóa riêng (private key), và các chứng chỉ trung gian (intermediate certificates) trong một tệp duy nhất. PFX, thường có đuôi .pfx hoặc .p12, cho phép bạn xuất và nhập các chứng chỉ SSL cùng với khóa riêng.
 
-Các trạng thái của domain
+Cách chuyển từ file crt file sang PFX file.
 
-Subdomain là gì?
+Để chuyển từ file .crt (hoặc .pem) và khóa riêng (.key) sang tệp PFX, bạn có thể sử dụng lệnh OpenSSL sau:
 
-Virtual Hosts là gì?
+openssl pkcs12 -export -out tech.training.vietnix.tech.pfx -inkey tech.training.vietnix.tech.key -in tech.training.vietnix.tech.crt -certfile intermediate.crt
 
+Trong lệnh trên:
 
-## Mail Server
+- export: Chỉ định rằng bạn đang tạo một tệp PFX.
+- out tech.training.vietnix.tech.pfx: Tên tệp PFX đầu ra.
+- inkey tech.training.vietnix.tech.key: Tệp khóa riêng.
+- in tech.training.vietnix.tech.crt: Tệp chứng chỉ chính.
+- certfile intermediate.crt: (Tùy chọn) Tệp chứng chỉ trung gian, nếu có.
 
-Tìm hiểu MX Record
-
-Tìm hiểu DKIM, SPF, PTR
-
-
-
-DNS
-
-DNS là gì ?
-
-Các loại recored DNS
-
-Nguyên tắc làm việc của DNS
-
-Cách phân giải địa chỉ DNS
+Lệnh này sẽ yêu cầu bạn nhập mật khẩu để bảo vệ tệp PFX, và sau đó tạo ra tệp .pfx chứa tất cả các thông tin cần thiết.
 
 
 
