@@ -741,6 +741,9 @@ ssh -i ~/.ssh/id_rsa username@hostname_or_ip
 -i ~/.ssh/id_rsa: Chỉ định tệp khóa riêng của bạn.
 username@hostname_or_ip: Tên người dùng và địa chỉ IP hoặc tên miền của máy chủ từ xa.
 
+#### Cấu hình SSH Client (Tùy chọn)
+Bạn có thể cấu hình SSH client để sử dụng khóa mặc định mà không cần chỉ định mỗi lần bằng cách chỉnh sửa tệp cấu hình ~/.ssh/config. Ví dụ:
+
 Host example
     HostName hostname_or_ip
     User username
@@ -753,8 +756,20 @@ User username: Tên người dùng trên máy chủ từ xa.
 IdentityFile ~/.ssh/id_rsa: Đường dẫn đến tệp khóa riêng của bạn.
 Port 22: Cổng SSH (thay đổi nếu sử dụng cổng khác).
 
-#### Cấu hình SSH Client (Tùy chọn)
-Bạn có thể cấu hình SSH client để sử dụng khóa mặc định mà không cần chỉ định mỗi lần bằng cách chỉnh sửa tệp cấu hình ~/.ssh/config. Ví dụ:
+Khi cấu hình tệp này, bạn có thể kết nối bằng cách đơn giản:
+
+ssh example
+#### Bảo mật khóa riêng
+Khóa riêng (private key) phải được bảo vệ cẩn thận. Nếu khóa riêng của bạn bị lộ, bất kỳ ai có khóa công khai tương ứng có thể truy cập vào hệ thống của bạn.
+
+Lưu ý bảo mật:
+
+- Sử dụng passphrase: Khi tạo khóa, sử dụng một passphrase để bảo vệ khóa riêng của bạn.
+-Phân quyền đúng: Đảm bảo tệp khóa riêng có quyền truy cập chỉ dành cho bạn. Bạn có thể thiết lập quyền bằng lệnh:
+
+chmod 600 ~/.ssh/id_rsa
+
+Không chia sẻ khóa riêng: Chỉ chia sẻ khóa công khai.
 
 ### Dùng port custom
 Nếu máy chủ từ xa đang chạy SSH trên một cổng khác ngoài cổng mặc định (22), bạn có thể chỉ định cổng tùy chỉnh bằng tùy chọn -p. Cú pháp là:
