@@ -881,10 +881,21 @@ EOF
 Lệnh này sẽ ghi nội dung từ Line 1 đến Line 3 vào filename.txt. Bạn cũng có thể dùng >> thay vì > nếu muốn thêm các dòng này vào cuối tệp mà không ghi đè nội dung hiện có.
 
 ## echo command
+Lệnh echo trong Unix/Linux được sử dụng để hiển thị thông điệp hoặc nội dung chuỗi lên màn hình hoặc chuyển hướng vào tệp
 
-Dùng echo để chèn thêm 1 dòng vào cuối file
+### Dùng echo để chèn thêm 1 dòng vào cuối file
+Bạn có thể sử dụng >> để thêm nội dung vào cuối tệp mà không ghi đè nội dung hiện có. Ví dụ:
 
-Dùng echo để overwirte nội dung của file
+echo "This is a new line" >> filename.txt
+
+Lệnh này sẽ chèn dòng "This is a new line" vào cuối filename.txt.
+
+### Dùng echo để overwirte nội dung của file
+Để ghi đè toàn bộ nội dung của tệp bằng lệnh echo, bạn sử dụng > thay vì >>. Ví dụ:
+
+echo "This is the new content" > filename.txt
+
+Lệnh này sẽ thay thế toàn bộ nội dung hiện có của filename.txt bằng dòng "This is the new content".
 
 ## tail/head command
 
