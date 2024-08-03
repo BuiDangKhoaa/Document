@@ -704,12 +704,66 @@ hping3 là một công cụ mạnh mẽ hơn, cho phép bạn gửi nhiều lo�
 - Time: Cho biết thời gian mà gói tin mất để đi từ nguồn đến đích và trở lại, đo bằng miligiây.
 
 ## ssh command
+Lệnh ssh (Secure Shell) được sử dụng để kết nối đến một máy chủ từ xa một cách an toàn qua mạng. Dưới đây là hướng dẫn về cách sử dụng lệnh ssh trong các tình huống khác nhau
 
-Dùng password
+### Dùng password
+ssh username@hostname_or_ip
 
-Dùng key
+- username là tên người dùng trên máy chủ từ xa.
+- hostname_or_ip là tên miền hoặc địa chỉ IP của máy chủ từ xa.
 
-Dùng port custom
+Khi bạn chạy lệnh này, bạn sẽ được yêu cầu nhập mật khẩu của người dùng trên máy chủ từ xa.
+### Dùng key
+
+#### Tạo cặp khóa SSH
+Trước tiên, bạn cần tạo một cặp khóa SSH gồm một khóa công khai (public key) và một khóa riêng (private key). Để làm điều này, bạn sử dụng lệnh ssh-keygen.
+
+ssh-keygen -t rsa
+
+Sau khi chạy lệnh, bạn sẽ được yêu cầu chọn vị trí lưu khóa và cung cấp mật khẩu (passphrase) để bảo vệ khóa riêng. Mặc định, khóa được lưu tại ~/.ssh/id_rsa và khóa công khai tại ~/.ssh/id_rsa.pub.
+
+#### Cài đặt khóa công khai trên máy chủ từ xa
+Để sử dụng khóa SSH, bạn cần phải cài đặt khóa công khai của bạn vào tệp authorized_keys trên máy chủ từ xa. Bạn có thể sử dụng lệnh ssh-copy-id để thực hiện điều này dễ dàng.
+
+ssh-copy-id -i ~/.ssh/id_rsa.pub username@hostname_or_ip
+
+-i ~/.ssh/id_rsa.pub: Chỉ định tệp khóa công khai bạn muốn cài đặt.
+username@hostname_or_ip: Thay thế bằng tên người dùng và địa chỉ IP hoặc tên miền của máy chủ từ xa.
+
+Lệnh này sẽ thêm khóa công khai của bạn vào tệp ~/.ssh/authorized_keys trên máy chủ từ xa.
+
+#### Kết nối bằng khóa SSH
+
+Sau khi khóa công khai đã được cài đặt trên máy chủ từ xa, bạn có thể kết nối mà không cần nhập mật khẩu, chỉ cần khóa riêng của bạn.
+
+ssh -i ~/.ssh/id_rsa username@hostname_or_ip
+
+-i ~/.ssh/id_rsa: Chỉ định tệp khóa riêng của bạn.
+username@hostname_or_ip: Tên người dùng và địa chỉ IP hoặc tên miền của máy chủ từ xa.
+
+Host example
+    HostName hostname_or_ip
+    User username
+    IdentityFile ~/.ssh/id_rsa
+    Port 22
+
+Host example: Tên gọi tắt cho máy chủ từ xa.
+HostName hostname_or_ip: Địa chỉ IP hoặc tên miền của máy chủ từ xa.
+User username: Tên người dùng trên máy chủ từ xa.
+IdentityFile ~/.ssh/id_rsa: Đường dẫn đến tệp khóa riêng của bạn.
+Port 22: Cổng SSH (thay đổi nếu sử dụng cổng khác).
+
+#### Cấu hình SSH Client (Tùy chọn)
+Bạn có thể cấu hình SSH client để sử dụng khóa mặc định mà không cần chỉ định mỗi lần bằng cách chỉnh sửa tệp cấu hình ~/.ssh/config. Ví dụ:
+
+### Dùng port custom
+Nếu máy chủ từ xa đang chạy SSH trên một cổng khác ngoài cổng mặc định (22), bạn có thể chỉ định cổng tùy chỉnh bằng tùy chọn -p. Cú pháp là:
+
+ssh -p port_number username@hostname_or_ip
+
+- port_number là số cổng tùy chỉnh mà máy chủ từ xa đang lắng nghe.
+- username là tên người dùng trên máy chủ từ xa.
+- hostname_or_ip là tên miền hoặc địa chỉ IP của máy chủ từ xa.
 
 ## scp command
 
