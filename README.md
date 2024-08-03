@@ -820,20 +820,65 @@ scp -r username@remote_host:/path/to/remote/folder /path/to/local/directory/
 - /path/to/local/directory/: Thư mục đích trên máy tính của bạn.
 
 ## rsync command
+Rsync (Remote Sync) là một công cụ hữu hiệu để sao lưu và đồng bộ dữ liệu trên Linux. Với câu lệnh rsync bạn có thể sao lưu và đồng bộ dữ liệu remote từ các máy sử dụng hệ điều hành Linux một cách dễ dàng và thuận tiện. 
 
-rsync file
+Cú pháp cơ bản
 
-rsync folder
+rsync options source destination
 
-rsync increamental
+Các tuỳ chọn trong rsync
+
+-v : verbose
+
+-r : sao chép dữ liệu theo cách đệ quy ( không bảo tồn mốc thời gian và permission trong quá trình truyền dữ liệu)
+
+-a :chế độ lưu trữ cho phép sao chép các tệp đệ quy và giữ các liên kết, quyền sở hữu, nhóm và mốc thời gian
+
+-z : nén dữ liệu
+
+-h : định dạng số
+
+### rsync file
+rsync -av /source/path/file.txt /destination/path/
+
+### rsync folder
+rsync -av /source/path/folder/ /destination/path/
+
+### rsync increamental
+rsync -av --delete /source/path/ /destination/path/
 
 ## cat command
+Cat command trong Linux là một lệnh thường dùng nhất và bạn cần học. Nó là chữ viết tắt của từ concatenate. Nó giúp bạn tạo, nhập, print file tới màn hình chuẩn hay tới một file khác, và còn nhiều tính năng khác nữa.
 
-cat nội dung 1 file
+Cú pháp Cat Command
 
-cat dòng thứ <n> trong file
+cat [OPTION] [FILE]
 
-cat nhiều dòng vào 1 file bằng EOF
+
+### cat nội dung 1 file
+Để hiển thị nội dung của một tệp, bạn sử dụng lệnh:
+
+cat filename.txt
+
+### cat dòng thứ <n> trong file
+cat không trực tiếp hỗ trợ việc hiển thị dòng cụ thể, nhưng bạn có thể kết hợp với sed để làm điều này:
+
+sed -n '<n>p' filename.txt
+
+Trong đó, <n> là số dòng mà bạn muốn hiển thị. Ví dụ, để hiển thị dòng thứ 3, bạn dùng:
+
+sed -n '3p' filename.txt
+
+### cat nhiều dòng vào 1 file bằng EOF
+Bạn có thể sử dụng cú pháp here document với EOF để thêm nhiều dòng vào một tệp. Ví dụ:
+
+cat <<EOF > filename.txt
+Line 1
+Line 2
+Line 3
+EOF
+
+Lệnh này sẽ ghi nội dung từ Line 1 đến Line 3 vào filename.txt. Bạn cũng có thể dùng >> thay vì > nếu muốn thêm các dòng này vào cuối tệp mà không ghi đè nội dung hiện có.
 
 ## echo command
 
