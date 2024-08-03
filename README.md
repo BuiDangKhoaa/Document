@@ -781,10 +781,43 @@ ssh -p port_number username@hostname_or_ip
 - hostname_or_ip là tên miền hoặc địa chỉ IP của máy chủ từ xa.
 
 ## scp command
+Lệnh scp (secure copy) được sử dụng để sao chép tập tin và thư mục giữa máy tính của bạn và một máy chủ từ xa hoặc giữa hai máy chủ từ xa thông qua SSH
 
-scp 1 file
+### scp 1 file
+#### Từ máy tính của bạn đến máy chủ từ xa:
 
-scp 1 folder
+scp /path/to/local/file username@remote_host:/path/to/remote/directory/
+
+- /path/to/local/file: Đường dẫn đến tập tin trên máy tính của bạn.
+- username@remote_host: Tên người dùng và địa chỉ IP hoặc tên miền của máy chủ từ xa.
+- /path/to/remote/directory/: Thư mục đích trên máy chủ từ xa.
+
+#### Từ máy chủ từ xa về máy tính của bạn:
+
+scp username@remote_host:/path/to/remote/file /path/to/local/directory/
+
+- username@remote_host: Tên người dùng và địa chỉ IP hoặc tên miền của máy chủ từ xa.
+- /path/to/remote/file: Đường dẫn đến tập tin trên máy chủ từ xa.
+- /path/to/local/directory/: Thư mục đích trên máy tính của bạn.
+
+### scp 1 folder
+Để sao chép toàn bộ thư mục, bạn cần sử dụng tùy chọn -r (recursive) để sao chép tất cả các tập tin và thư mục con.
+
+#### Từ máy tính của bạn đến máy chủ từ xa:
+
+scp -r /path/to/local/folder username@remote_host:/path/to/remote/directory/
+
+- /path/to/local/folder: Đường dẫn đến thư mục bạn muốn sao chép trên máy tính của bạn.
+- username@remote_host: Tên người dùng và địa chỉ IP hoặc tên miền của máy chủ từ xa.
+- /path/to/remote/directory/: Thư mục đích trên máy chủ từ xa.
+
+#### Từ máy chủ từ xa về máy tính của bạn:
+
+scp -r username@remote_host:/path/to/remote/folder /path/to/local/directory/
+
+- username@remote_host: Tên người dùng và địa chỉ IP hoặc tên miền của máy chủ từ xa.
+- /path/to/remote/folder: Đường dẫn đến thư mục trên máy chủ từ xa.
+- /path/to/local/directory/: Thư mục đích trên máy tính của bạn.
 
 ## rsync command
 
