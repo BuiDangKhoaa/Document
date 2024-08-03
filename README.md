@@ -952,14 +952,23 @@ tailf là một lệnh cũ và gần giống với tail -f, nhưng có một s�
 
 tailf filename.txt
 
-
 ## sed command
+sed (Stream Editor) là một công cụ mạnh mẽ trong Unix/Linux để xử lý và biến đổi văn bản. Một trong những tính năng phổ biến nhất của sed là tìm kiếm và thay thế chuỗi.
 
-Dùng sed để find and replace một string trong file
+### Dùng sed để find and replace một string trong file
 
+sed 's/old_string/new_string/g' filename.txt
+
+s: Là lệnh thay thế (substitute).
+old_string: Chuỗi bạn muốn tìm kiếm.
+new_string: Chuỗi bạn muốn thay thế.
+g: Tùy chọn toàn cục (global), thay thế tất cả các lần xuất hiện của old_string trong dòng. Nếu bỏ qua tùy chọn này, sed sẽ chỉ thay thế lần xuất hiện đầu tiên trên mỗi dòng.
+filename.txt: Tệp mà bạn muốn thay đổi.
 ## traceroute/tracert command
 
 Sau khi traceroute xong giải thích chi tiết kết quả trả về
+
+![ảnh](https://github.com/user-attachments/assets/a0d1b8af-ba02-4265-90fb-99c4660a1fc3)
 
 ## netstat command
 
