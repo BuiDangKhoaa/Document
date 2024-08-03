@@ -898,8 +898,60 @@ echo "This is the new content" > filename.txt
 Lệnh này sẽ thay thế toàn bộ nội dung hiện có của filename.txt bằng dòng "This is the new content".
 
 ## tail/head command
+### Head
+Lệnh head được dùng để in ra các phần đầu tiên của tệp. Nó đọc các tập tin từ đầu. Nếu bạn có một tệp có hơn một nghìn dòng, sẽ rất khó mở và đọc nó. Bạn có thể dễ dàng in ra một vài dòng trên cùng bằng lệnh head.
 
-tail và tailf
+Cú pháp cơ bản của lệnh là:
+
+head [option] [file]
+
+Lệnh head được sử dụng để hiển thị các dòng đầu tiên của tệp. Theo mặc định, head hiển thị 10 dòng đầu tiên.
+
+Hiển thị 10 dòng đầu tiên của tệp:
+
+head filename.txt
+
+Hiển thị n dòng đầu tiên của tệp:
+
+head -n 20 filename.txt
+
+
+### Tail 
+Lệnh này in các dòng cuối cùng của tệp. Nó đọc các tệp từ cuối và xuất ra các dòng cuối. 
+
+Cú pháp cơ bản của lệnh là:
+
+tail [option] [file]
+
+Lệnh tail được sử dụng để hiển thị các dòng cuối cùng của tệp. Theo mặc định, tail hiển thị 10 dòng cuối cùng.
+
+Hiển thị 10 dòng cuối cùng của tệp:
+
+tail filename.txt
+
+Hiển thị n dòng cuối cùng của tệp:
+
+tail -n 20 filename.txt
+
+#### tail và tailf
+##### Lệnh tail với tùy chọn -f
+
+tail với tùy chọn -f được sử dụng để theo dõi một tệp trong thời gian thực, tức là hiển thị nội dung mới được thêm vào cuối tệp khi tệp đó được ghi thêm. Đây là tính năng phổ biến nhất khi theo dõi các tệp nhật ký.
+
+tail -f filename.txt
+
+Tùy chọn -f của tail có các tính năng hiện đại như khả năng xử lý tốt khi tệp được ghi đè hoặc di chuyển.
+
+##### Lệnh tailf
+
+tailf là một lệnh cũ và gần giống với tail -f, nhưng có một số khác biệt nhỏ:
+
+- Hiệu năng: tailf được tối ưu hóa hơn cho việc theo dõi các tệp không thường xuyên cập nhật. Nó không kiểm tra thay đổi tệp liên tục như tail -f mà chỉ kiểm tra khi có hoạt động đọc mới, giúp giảm tải hệ thống khi theo dõi các tệp lớn ít thay đổi.
+
+- Giới hạn: tailf không hỗ trợ tùy chọn mở rộng hoặc theo dõi các tệp đã được di chuyển hoặc ghi đè. Nó sẽ ngừng theo dõi khi tệp bị di chuyển hoặc thay thế, điều này đã làm cho tailf trở nên ít phổ biến hơn và không còn được khuyến nghị sử dụng.
+
+tailf filename.txt
+
 
 ## sed command
 
