@@ -691,12 +691,17 @@ Trong lệnh trên:
 
 Lệnh này sẽ yêu cầu bạn nhập mật khẩu để bảo vệ tệp PFX, và sau đó tạo ra tệp .pfx chứa tất cả các thông tin cần thiết.
 
+## ping/hping3 
+### ping 
+ping là một công cụ cơ bản để kiểm tra kết nối mạng bằng cách gửi gói tin ICMP Echo Request đến một địa chỉ IP hoặc tên miền và nhận lại gói tin ICMP Echo Reply.
+### hping3 
+hping3 là một công cụ mạnh mẽ hơn, cho phép bạn gửi nhiều loại gói tin và tùy chỉnh các thông số.
+### ping đến domain vietnix.vn 
 
-ping/hping3 ping đến domain vietnix.vn sau đó giải thích
+![ảnh](https://github.com/user-attachments/assets/4851f889-252a-40d3-817a-67f6d7db4bdb)
 
-ttl= là gì
-
-time= là gì
+- TTL: Cho biết số lượng router (hops) mà gói tin đã đi qua hoặc khả năng sống sót của gói tin trong mạng.
+- Time: Cho biết thời gian mà gói tin mất để đi từ nguồn đến đích và trở lại, đo bằng miligiây.
 
 ssh command
 
