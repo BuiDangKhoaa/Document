@@ -1058,10 +1058,13 @@ mv file, folder
 ## cut command
 
 cut kí tự thứ <n> trong string
+![ảnh](https://github.com/user-attachments/assets/c1c2508b-f526-4654-a829-d69a43a75a22)
 
 cut từ kí tự thứ <n> trở về sau
+![ảnh](https://github.com/user-attachments/assets/fffcdb7d-86b9-475f-a47b-bf86e0050f05)
 
 cut từ kí tự thứ <n> trở về trước
+![Uploading ảnh.png…]()
 
 ## dig command
 
