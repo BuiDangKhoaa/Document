@@ -1008,9 +1008,10 @@ Lệnh sort trong Unix/Linux được sử dụng để sắp xếp dữ liệu.
 ### sort theo thứ tự tăng dần
 
 
-
 ### sort theo thứ tự giảm dần
 
+
+![Uploading Chụp màn hình từ 2024-08-05 09-42-21.png…]()
 
 ### sort theo column
 
