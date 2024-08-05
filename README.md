@@ -1015,131 +1015,407 @@ Lệnh sort trong Unix/Linux được sử dụng để sắp xếp dữ liệu.
 ### sort theo column
 ![ảnh](https://github.com/user-attachments/assets/00f06b5a-37f1-49f6-9bbe-6f03f7118eb5)
 
+
 ## uniq command
-
-lọc ra các dòng lặp lại trong một file
-
-lọc ra các dòng lặp lại trong file và đếm số lượng các dòng lặp lại
+Lệnh uniq trong Linux được sử dụng để hiển thị các dòng giống hệt nhau trong tệp văn bản
+### lọc ra các dòng lặp lại trong một file
+uniq -d file.txt 
+### lọc ra các dòng lặp lại trong file và đếm số lượng các dòng lặp lại
+uniq -d -c file.txt 
 
 ## wc command
+Lệnh wc (word count) có thể được sử dụng để đếm số dòng, số từ, và số ký tự trong một file. Dưới đây là cách sử dụng wc cho các yêu cầu của bạn:
 
-Đếm số dòng trong file
-
-Đếm số kí tự trong file
+### Đếm số dòng trong file
+wc -l file.txt 
+### Đếm số kí tự trong file
+wc -m file.txt 
 
 ## chmod, chown, chattr command
+Các lệnh chmod, chown và chattr là những công cụ cơ bản và quan trọng trong hệ thống Linux/Unix để quản lý quyền truy cập vào các tập tin và thư mục. Chúng cho phép người dùng điều chỉnh quyền sở hữu, quyền đọc, ghi và thực thi đối với các đối tượng trên hệ thống.
 
-Phân quyền bằng số, phân quyền bằng chữ
+Lệnh chmod: Thay đổi quyền truy cập
 
-Đổi owner user/group
+Lệnh chown: Thay đổi chủ sở hữu và nhóm
 
-Set Immutable Attribute
+Lệnh chattr: Thay đổi các thuộc tính mở rộng
+
+### Phân quyền bằng số, phân quyền bằng chữ
+chmod - Phân quyền bằng số và bằng chữ
+
+#### Phân quyền bằng số:
+Mỗi quyền được biểu diễn bằng một con số từ 0 đến 7:
+- 0: không có quyền nào
+- 1: quyền thực thi (x)
+- 2: quyền ghi (w)
+- 3: quyền thực thi + ghi (wx)
+- 4: quyền đọc (r)
+- 5: quyền đọc + thực thi (rx)
+- 6: quyền đọc + ghi (rw)
+- 7: quyền đọc + ghi + thực thi (rwx)
+
+Ví dụ: chmod 755 file.txt sẽ cấp quyền rwxr-xr-x cho tệp tin file.txt.
+
+ #### Phân quyền bằng chữ:
+        u: user (chủ sở hữu)
+        g: group (nhóm)
+        o: other (người khác)
+        a: all (tất cả)
+        Ví dụ: chmod u=rwx,g=rx,o=r file.txt sẽ cấp quyền rwxr-xr-- cho tệp tin file.txt.
+
+### Đổi owner user/group
+chown dùng để thay đổi chủ sở hữu (user) và nhóm (group) của một tệp tin hoặc thư mục.
+
+Ví dụ:
+
+    chown user1 file.txt: Thay đổi chủ sở hữu của file.txt thành user1.
+    chown user1:group1 file.txt: Thay đổi chủ sở hữu và nhóm của file.txt thành user1:group1.
+
+### Set Immutable Attribute
+chattr dùng để thay đổi các thuộc tính đặc biệt của một tệp tin hoặc thư mục.
+
+Một trong những thuộc tính quan trọng là immutable, nó ngăn không cho tệp tin được xóa, sửa đổi hay ghi đè.
+
+Ví dụ:
+
+    chattr +i file.txt: Đặt thuộc tính immutable cho file.txt.
+    chattr -i file.txt: Bỏ thuộc tính immutable khỏi file.txt.
 
 ## find command
+Lệnh find là một công cụ hữu ích để tìm kiếm các tệp tin trong hệ thống Linux. Nó cho phép người dùng tìm kiếm theo nhiều tiêu chí khác nhau và thực hiện các hành động trên các tệp tin được tìm thấy
 
-find các file có đuôi .log
+### find các file có đuôi .log
+find / -type f -name "*.log"
 
-find các folder có tên abc
+    find /: Tìm kiếm trên toàn bộ hệ thống (/ là thư mục gốc).
+    -type f: Chỉ tìm kiếm các tệp tin (file), không tìm thư mục.
+    -name "*.log": Tìm kiếm các tệp tin có tên kết thúc bằng .log.
 
-find các file có tên abc
+### find các folder có tên abc
+find / -type d -name "abc"
 
-find các file có tên abc và thực hiện phần quyền read only cho file
+    -type d: Chỉ tìm kiếm các thư mục.
+    -name "abc": Tìm các thư mục có tên chính xác là abc.
+
+### find các file có tên abc
+find / -type f -name "abc"
+
+    -type f: Chỉ tìm kiếm các tệp tin.
+    -name "abc": Tìm các tệp tin có tên chính xác là abc.
+
+### find các file có tên abc và thực hiện phần quyền read only cho file
+find / -type f -name "abc" -exec chmod 444 {} \;
+
+    -exec chmod 444 {} \;: Sau khi tìm thấy các tệp tin, thực hiện lệnh chmod 444 {} trên chúng. Trong đó {} được thay thế bằng đường dẫn của từng tệp tin được tìm thấy.
+    chmod 444: Cấp quyền read-only (r--r--r--) cho các tệp tin.
 
 ## cp command
+Lệnh cp trong Linux/Unix được sử dụng để sao chép các tệp tin và thư mục
 
-cp file
+### cp file
+cp file.txt file_copy.txt
 
-cp folder
+Câu lệnh này sẽ tạo một bản sao của tệp tin file.txt với tên file_copy.txt trong cùng thư mục.
+### cp folder
+cp -r documents/ documents_backup/
+
+Câu lệnh này sẽ sao chép toàn bộ nội dung của thư mục documents/ sang thư mục mới documents_backup/. Tùy chọn -r (recursive) cho phép sao chép cả các thư mục con. 
 
 ## mv command
+Lệnh mv trong Linux/Unix được sử dụng để di chuyển hoặc đổi tên các tệp tin và thư mục.
 
-mv file, folder
+### mv file, folder
+#### Di chuyển tệp tin: 
+mv file.txt documents/
 
+Câu lệnh này sẽ di chuyển tệp tin file.txt vào thư mục documents/. 
+#### Đổi tên tệp tin: 
+mv file.txt new_file.txt
+
+Câu lệnh này sẽ đổi tên tệp tin file.txt thành new_file.txt. 
+
+#### Di chuyển thư mục: 
+mv documents/ documents_backup/
+
+Câu lệnh này sẽ di chuyển thư mục documents/ vào thư mục documents_backup/. 
+
+#### Đổi tên thư mục: 
+mv documents/ new_folder/
+
+Câu lệnh này sẽ đổi tên thư mục documents/ thành new_folder/. 
 ## cut command
+Lệnh cut trong Linux/Unix được sử dụng để trích xuất một phần của một chuỗi ký tự
 
-cut kí tự thứ <n> trong string
+### cut kí tự thứ <n> trong string
+echo "Hello, World!" | cut -c 7
+
 ![ảnh](https://github.com/user-attachments/assets/c1c2508b-f526-4654-a829-d69a43a75a22)
 
-cut từ kí tự thứ <n> trở về sau
+### cut từ kí tự thứ <n> trở về sau
+echo "Hello, World!" | cut -c 7-
+
 ![ảnh](https://github.com/user-attachments/assets/fffcdb7d-86b9-475f-a47b-bf86e0050f05)
 
-cut từ kí tự thứ <n> trở về trước
+Kết quả: World!
+Lệnh này sẽ trích xuất các ký tự từ vị trí thứ 7 trở về sau trong chuỗi "Hello, World!".
+### cut từ kí tự thứ <n> trở về trước
+echo "Hello, World!" | cut -c -6
+
 ![Uploading ảnh.png…]()
 
-## dig command
+Kết quả: Hello,
+Lệnh này sẽ trích xuất các ký tự từ đầu chuỗi đến ký tự thứ 6 trong chuỗi "Hello, World!".
+# dig command
+Lệnh dig (Domain Information Groper) là một công cụ mạnh mẽ để kiểm tra thông tin về các bản ghi DNS (Domain Name System) khác nhau
 
-Dùng Dig command để kiểm tra resolv record A, MX, NS
+### Dùng Dig command để kiểm tra resolv record A, MX, NS
+#### resolv record A
+dig vietnix.vn A
 
-Dùng Dig command để kiểm tra resolv record A, MX, NS với custom DNS
+#### resolv record MX
+dig vietnix.vn MX
+
+#### resolv record NS
+dig vietnix.vn NS
+
+### Dùng Dig command để kiểm tra resolv record A, MX, NS với custom DNS
+#### resolv record A
+dig @8.8.8.8 vietnix.vn A
+
+#### resolv record MX
+dig @8.8.8.8 vietnix.vn MX
+
+#### resolv record NS
+dig @8.8.8.8 vietnix.vn NS
 
 ## tar/zip/unzip command
+Trong Linux và các hệ điều hành tương tự, các lệnh tar, zip và unzip được sử dụng để nén và giải nén các tệp và thư mục.
 
-- Nén/Giải nén file tar.gz - Nén/Giải nén file .zip
+### Nén/Giải nén file tar.gz
+#### Nén file/thư mục: 
+ tar -czf output.tar.gz input_file_or_directory
+ 
+    -c: Tạo một kho lưu trữ mới
+    -z: Sử dụng nén gzip
+    -f: Chỉ định tên tệp kho lưu trữ
+#### Giải nén file tar.gz: 
+tar -xzf input.tar.gz
+
+    -x: Giải nén
+    -z: Sử dụng nén gzip
+    -f: Chỉ định tên tệp kho lưu trữ
+
+### Nén/Giải nén file .zip
+#### Nén file/thư mục: 
+zip -r output.zip input_file_or_directory
+
+    -r: Nén đệ quy (để nén thư mục)
+
+#### Giải nén file .zip: 
+unzip input.zip
 
 ## mount/umount command
 
-- Add thêm một ổ cứng sdb ~ 5gb
+### Add thêm một ổ cứng sdb ~ 5gb
+Giả sử ổ cứng mới đã được gắn vào hệ thống với thiết bị tên là /dev/sdb, 
 
-- Kiểm tra được có bao nhiêu ổ cứng trên máy chủ
+Tạo phân vùng trên ổ cứng mới:
 
-- Mount ổ cứng vào /mnt/test
+sudo fdisk /dev/sdb
 
-- Umount /mnt/test
+Tạo hệ thống tệp (filesystem):
+
+Để tạo hệ thống tệp ext4 trên phân vùng mới tạo, sử dụng lệnh sau:
+
+sudo mkfs.ext4 /dev/sdb1
+
+Thay /dev/sdb1 bằng tên phân vùng cụ thể.
+### Kiểm tra được có bao nhiêu ổ cứng trên máy chủ
+Lệnh lsblk: Hiển thị danh sách các thiết bị lưu trữ và phân vùng của chúng.
+
+lsblk
+
+Lệnh fdisk -l: Liệt kê tất cả các phân vùng và ổ đĩa.
+
+fdisk -l
+
+Lệnh df -h: Hiển thị thông tin về không gian đĩa đã sử dụng và còn trống.
+
+df -h
+### Mount ổ cứng vào /mnt/test
+ Tạo thư mục mount point
+ 
+mkdir /mnt/test
+
+ Mount ổ cứng vào thư mục /mnt/test
+ 
+mount /dev/sdb1 /mnt/test
+
+### Umount /mnt/test
+
+umount /mnt/test
+
 
 ## Symbolic Links, Hard Links command
 
-Định nghĩ Sym Link
+### Định nghĩ Sym Link
 
-Định nghĩ Hard Link
+Symbolic Link (hay còn gọi là symlink hoặc soft link) là một loại file đặc biệt chứa đường dẫn đến một file hoặc thư mục khác. Khi bạn truy cập một symlink, hệ thống sẽ tự động chuyển hướng đến file hoặc thư mục gốc mà nó tham chiếu. Symlink không chứa dữ liệu thực sự của file mà chỉ chứa đường dẫn đến nó.
+### Ví dụ về Sym Link
+Giả sử bạn có file gốc là /home/user/file.txt và bạn muốn tạo một symlink có tên là /home/user/symlink.txt:
 
-Ví dụ về Sym Link và Hard Link
+ln -s /home/user/file.txt /home/user/symlink.txt
 
+Bây giờ, khi bạn truy cập symlink.txt, nó sẽ chuyển hướng bạn đến nội dung của file.txt.
+### Định nghĩa Hard Link
+Hard Link là một tham chiếu trực tiếp đến dữ liệu trên ổ đĩa, được lưu trữ trong cùng một hệ thống file. Khi tạo một hard link, nó sẽ trỏ đến cùng dữ liệu vật lý mà file gốc sử dụng, có nghĩa là cả hai link (file gốc và hard link) sẽ chia sẻ cùng một inode.
+
+### Ví dụ về Hard Link
+Giả sử bạn có file gốc là /home/user/file.txt và bạn muốn tạo một hard link có tên là /home/user/hardlink.txt:
+
+ln /home/user/file.txt /home/user/hardlink.txt
+
+Cả file.txt và hardlink.txt đều trỏ đến cùng một dữ liệu. Nếu bạn xóa file.txt, dữ liệu vẫn sẽ có sẵn qua hardlink.txt.
 ## ls command
+Lệnh ls trong hệ điều hành Linux được sử dụng để liệt kê các file và thư mục trong một thư mục
 
-Liệt kê danh sách file/thư mục
+### Liệt kê danh sách file/thư mục
+Để liệt kê các file và thư mục trong thư mục hiện tại, bạn chỉ cần sử dụng lệnh ls:
 
-Liệt kê danh sách file/thư mục và thuộc tính
+ls
+### Liệt kê danh sách file/thư mục và thuộc tính
+Để liệt kê file và thư mục cùng với các thuộc tính của chúng (như quyền, số lượng liên kết, chủ sở hữu, nhóm, kích thước, thời gian sửa đổi cuối cùng), bạn sử dụng tùy chọn -l:
 
-Show file ẩn
+ls -l
+### Show file ẩn
+File ẩn trong Linux thường bắt đầu bằng dấu chấm (.). Để hiển thị cả file ẩn, bạn sử dụng tùy chọn -a:
+
+ls -a
+
+Kết hợp hiển thị file ẩn và thuộc tính
+
+ls -la
+
+ls -al
 
 ## ps command
+Lệnh ps trong Linux được sử dụng để hiển thị thông tin về các tiến trình đang chạy trên hệ thống. Kết hợp với lệnh kill, bạn có thể dừng các tiến trình cụ thể
 
-show tiến trình
+### show tiến trình
+Lệnh ps đơn giản sẽ hiển thị các tiến trình hiện tại do người dùng đang sử dụng chạy trong cùng một terminal.
 
-kill tiến trình
+Sử dụng tùy chọn -e hoặc -A để liệt kê tất cả các tiến trình trên hệ thống:
 
+ps -e
+
+hoặc
+
+ps -A
+
+Sử dụng tùy chọn -f hoặc -l để hiển thị thông tin chi tiết (full-format listing) về các tiến trình, bao gồm PID (Process ID), TTY, TIME, CMD, v.v.:
+
+ps -ef
+
+hoặc
+
+ps -el
+
+Sử dụng tùy chọn --forest để hiển thị các tiến trình trong dạng cây, giúp bạn thấy các tiến trình cha-con dễ dàng hơn:
+
+ps -ef --forest
+
+### kill tiến trình
+Sử dụng lệnh kill với PID của tiến trình bạn muốn dừng:
+
+kill PID
+
+Dừng tiến trình một cách mạnh mẽ (force kill)
+Nếu tiến trình không dừng lại khi sử dụng lệnh kill thông thường, bạn có thể sử dụng tín hiệu -9 để ép buộc dừng:
+
+kill -9 PID
+
+Lưu ý rằng việc sử dụng kill -9 có thể không an toàn vì nó không cho tiến trình cơ hội để dọn dẹp và lưu trạng thái trước khi bị dừng.
 ## top command
+Lệnh top trong Linux là một công cụ giám sát hệ thống mạnh mẽ, cung cấp thông tin chi tiết về các tiến trình đang chạy, tài nguyên hệ thống như CPU, bộ nhớ, và nhiều thông số khác. 
 
-Kiểm tra tài nguyên cpu đang sử dụng của một vài process đang chạy
+### Kiểm tra tài nguyên cpu đang sử dụng của một vài process đang chạy
+Khi bạn chạy lệnh top, nó sẽ hiển thị một danh sách các tiến trình đang chạy, cùng với các thông tin chi tiết về tài nguyên mà mỗi tiến trình đang sử dụng. Để xem thông tin về việc sử dụng CPU của các tiến trình, bạn có thể quan sát cột %CPU.
 
-Giải thích về Load average, us, sy, ni, id, wa, hi, si, st, zombie process, sleeping process
+top
 
+### Giải thích về Load average, us, sy, ni, id, wa, hi, si, st, zombie process, sleeping process
+#### Load Average
+Load Average là một chỉ số cho biết số lượng tiến trình đang chạy hoặc sẵn sàng chạy trong hàng đợi CPU. Nó thường được hiển thị dưới dạng ba số tương ứng với trung bình tải trong 1, 5, và 15 phút qua.
+
+    Giá trị dưới 1 cho thấy CPU không quá tải.
+    Giá trị trên 1 có nghĩa là hệ thống có nhiều yêu cầu hơn so với khả năng xử lý của CPU.
+    
+#### CPU States
+Các trạng thái CPU được hiển thị trong top bao gồm:
+
+    us (user): Phần trăm CPU sử dụng cho các tiến trình của người dùng.
+    sy (system): Phần trăm CPU sử dụng cho các tiến trình hệ thống (kernel).
+    ni (nice): Phần trăm CPU sử dụng cho các tiến trình với mức độ ưu tiên đã được thay đổi.
+    id (idle): Phần trăm CPU không làm việc, thể hiện thời gian CPU rảnh rỗi.
+    wa (wait): Phần trăm thời gian CPU đang chờ I/O (ví dụ: đọc/ghi ổ đĩa).
+    hi (hardware interrupts): Phần trăm thời gian CPU xử lý các ngắt phần cứng.
+    si (software interrupts): Phần trăm thời gian CPU xử lý các ngắt phần mềm.
+    st (steal time): Phần trăm thời gian CPU bị "ăn cắp" từ một máy ảo khác (trong trường hợp sử dụng ảo hóa).  
+    
+#### Process States
+    Zombie Process: Tiến trình đã kết thúc nhưng vẫn còn tồn tại trong bảng tiến trình bởi vì tiến trình cha chưa đọc trạng thái thoát của nó. Zombie tiến trình không sử dụng tài nguyên hệ thống (ngoại trừ một mục nhỏ trong bảng tiến trình).
+
+    Sleeping Process: Tiến trình đang đợi một sự kiện xảy ra (như I/O hoặc tín hiệu). Nó có thể là:
+        Interruptible sleep: Tiến trình có thể bị đánh thức bởi các tín hiệu (được chỉ định bởi chữ S trong cột STAT).
+        Uninterruptible sleep: Tiến trình không thể bị đánh thức bởi tín hiệu (được chỉ định bởi chữ D trong cột STAT), thường là khi đang chờ I/O từ đĩa hoặc mạng.    
+    
 ## free command
+Lệnh free trong Linux cung cấp thông tin về việc sử dụng bộ nhớ trong hệ thống, bao gồm RAM và swap. Khi bạn chạy lệnh free, bạn sẽ thấy một bảng liệt kê chi tiết về việc sử dụng bộ nhớ, với các cột như used, free, shared, buff/cache, và available
 
-Giải thích ram used, free, shared, buff/cache, free
+### Giải thích ram used, free, shared, buff/cache, free
+### used
+- RAM đã sử dụng: Đây là tổng dung lượng RAM đang được sử dụng bởi hệ thống, bao gồm cả bộ nhớ đã được hệ thống và các ứng dụng chiếm dụng.
+- Giá trị này bao gồm cả bộ nhớ dành cho các bộ đệm (buffers) và bộ nhớ đệm (cache), mà có thể được giải phóng nếu cần thiết cho các tiến trình khác.
+### free
+- RAM còn trống: Đây là lượng RAM hoàn toàn chưa được sử dụng và có sẵn để sử dụng ngay lập tức mà không cần giải phóng bất kỳ tài nguyên nào.
+### shared
+- Bộ nhớ chia sẻ: Đây là lượng bộ nhớ được sử dụng cho các phân vùng bộ nhớ chia sẻ (shared memory segments), thường được sử dụng bởi các tiến trình để trao đổi dữ liệu với nhau. Đây là một phần của bộ nhớ used.
+### buff/cache
+- Bộ nhớ đệm (buffers): Đây là bộ nhớ tạm thời được sử dụng bởi kernel để lưu trữ dữ liệu trong quá trình di chuyển từ hoặc đến các thiết bị I/O, như ổ đĩa.
+- Bộ nhớ đệm (cache): Đây là bộ nhớ được kernel sử dụng để lưu trữ các trang bộ nhớ đã đọc từ đĩa để tăng tốc độ truy cập trong tương lai.
+- Bộ nhớ trong buff/cache có thể được giải phóng và sử dụng lại khi hệ thống cần thêm bộ nhớ.
+### available
+- Bộ nhớ khả dụng: Đây là ước tính lượng bộ nhớ có sẵn cho các ứng dụng mới mà không cần trao đổi bộ nhớ đã tồn tại. Khác với free, available bao gồm cả bộ nhớ hiện đang được sử dụng bởi các bộ đệm và bộ nhớ đệm, mà có thể được giải phóng khi cần.
 
 ## df command
+Lệnh df trong Linux được sử dụng để hiển thị thông tin về việc sử dụng không gian đĩa của các hệ thống file.
 
-Xem dung lượng disk
+### Xem dung lượng disk
+Hiển thị thông tin cơ bản:
+df
 
-Phân vùng / là gì
+Hiển thị thông tin với đơn vị dễ đọc hơn:
+df -h
+### Phân vùng 
+Trong Linux, phân vùng / (hay còn gọi là root partition) là phân vùng chính chứa hệ thống file gốc của hệ điều hành. Đây là nơi chứa tất cả các thư mục và file cần thiết cho hệ thống để khởi động và vận hành. Khi một hệ thống Linux khởi động, nó sẽ gắn kết phân vùng / trước tiên, và tất cả các thư mục khác đều là các nhánh con của phân vùng này.
 
+#### Một số thư mục quan trọng trong phân vùng / bao gồm:
 
+    /bin: Chứa các chương trình nhị phân thiết yếu.
+    /boot: Chứa các file cần thiết cho quá trình khởi động, bao gồm kernel.
+    /dev: Chứa các file thiết bị (device files).
+    /etc: Chứa các file cấu hình hệ thống.
+    /home: Chứa thư mục home của các người dùng.
+    /lib: Chứa các thư viện chia sẻ cần thiết cho các chương trình hệ thống.
+    /mnt: Điểm mount tạm thời cho các hệ thống file.
+    /opt: Thường chứa các phần mềm tùy chọn (optional software).
+    /proc: Hệ thống file giả lập chứa thông tin về các tiến trình.
+    /root: Thư mục home của người dùng root.
+    /sbin: Chứa các chương trình hệ thống thiết yếu.
+    /usr: Chứa các chương trình và thư viện của người dùng.
+    /var: Chứa các file dữ liệu thay đổi (như log và dữ liệu của ứng dụng).
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+Phân vùng / rất quan trọng vì nó chứa toàn bộ cấu trúc thư mục của hệ thống và đảm bảo rằng tất cả các thư mục và file cần thiết đều có thể truy cập được.
 
 
 
