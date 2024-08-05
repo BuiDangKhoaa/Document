@@ -1011,7 +1011,8 @@ Lệnh sort trong Unix/Linux được sử dụng để sắp xếp dữ liệu.
 
 ### sort theo thứ tự giảm dần
 
-![Uploading Chụp màn hình từ 2024-08-05 09-42-21.png…]()
+![Chụp màn hình từ 2024-08-05 09-42-21](https://github.com/user-attachments/assets/c633d5b7-ff2c-4bfb-a839-20ef1a44dcd8)
+
 
 ### sort theo column
 ![ảnh](https://github.com/user-attachments/assets/00f06b5a-37f1-49f6-9bbe-6f03f7118eb5)
@@ -1146,22 +1147,22 @@ Câu lệnh này sẽ đổi tên thư mục documents/ thành new_folder/.
 ## cut command
 Lệnh cut trong Linux/Unix được sử dụng để trích xuất một phần của một chuỗi ký tự
 
-### cut kí tự thứ <n> trong string
+### cut kí tự thứ n trong string
     echo "Hello, World!" | cut -c 7
 
 ![ảnh](https://github.com/user-attachments/assets/c1c2508b-f526-4654-a829-d69a43a75a22)
 
-### cut từ kí tự thứ <n> trở về sau
+### cut từ kí tự thứ n trở về sau
     echo "Hello, World!" | cut -c 7-
 
 ![ảnh](https://github.com/user-attachments/assets/fffcdb7d-86b9-475f-a47b-bf86e0050f05)
 
 Kết quả: World!
 Lệnh này sẽ trích xuất các ký tự từ vị trí thứ 7 trở về sau trong chuỗi "Hello, World!".
-### cut từ kí tự thứ <n> trở về trước
+### cut từ kí tự thứ n trở về trước
     echo "Hello, World!" | cut -c -6
 
-![Uploading ảnh.png…]()
+![Chụp màn hình từ 2024-08-05 09-57-19](https://github.com/user-attachments/assets/84d871b7-28fa-4c5f-b9ed-5ef260b78c6c)
 
 Kết quả: Hello,
 Lệnh này sẽ trích xuất các ký tự từ đầu chuỗi đến ký tự thứ 6 trong chuỗi "Hello, World!".
