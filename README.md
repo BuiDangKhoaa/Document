@@ -1,4 +1,4 @@
-
+![Chụp màn hình từ 2024-08-05 08-55-32](https://github.com/user-attachments/assets/39a1e305-6080-41fd-b26c-598bb37fb5e7)
 ## Hosting
 Hosting hay web hosting là không gian lưu trữ dữ liệu được chia nhỏ từ các máy chủ (server), giúp đăng tải dữ liệu và xuất bản website, app trên Internet. Khi đăng ký dịch vụ hosting, nghĩa là đang thuê một chỗ đặt chứa tất cả các file và dữ liệu cần thiết lên trên server để website có thể hoạt động được 24/7.
 Tất cả các website của nhiều khách hàng đều dùng chung tài nguyên của máy chủ như CPU ​​và RAM.
@@ -983,14 +983,17 @@ netstat là một công cụ dòng lệnh được sử dụng để theo dõi s
 ### don't resolve hostname
 Không giải quyết hostname: -n
 
+![Chụp màn hình từ 2024-08-05 08-55-32](https://github.com/user-attachments/assets/a63ac3b5-586d-4753-ae5e-63c2d6440a61)
 
 ### don't resolve portname
 Không giải quyết portname: -n (đồng thời không giải quyết cả hostname và portname)
 
+![Chụp màn hình từ 2024-08-05 08-55-32](https://github.com/user-attachments/assets/e08e148b-9bce-4bb8-8248-64093af511f9)
 
 ### display process name/PID
 Hiển thị tên tiến trình và PID: -p
 
+![Chụp màn hình từ 2024-08-05 08-56-42](https://github.com/user-attachments/assets/62b55fb3-b0b0-41c6-a634-bcef0e725bef)
 
 ### only show tcp socket
 Chỉ hiển thị socket TCP: -t
