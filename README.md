@@ -707,7 +707,7 @@ hping3 là một công cụ mạnh mẽ hơn, cho phép bạn gửi nhiều lo�
 Lệnh ssh (Secure Shell) được sử dụng để kết nối đến một máy chủ từ xa một cách an toàn qua mạng. Dưới đây là hướng dẫn về cách sử dụng lệnh ssh trong các tình huống khác nhau
 
 ### Dùng password
-ssh username@hostname_or_ip
+    ssh username@hostname_or_ip
 
 - username là tên người dùng trên máy chủ từ xa.
 - hostname_or_ip là tên miền hoặc địa chỉ IP của máy chủ từ xa.
@@ -725,7 +725,7 @@ Sau khi chạy lệnh, bạn sẽ được yêu cầu chọn vị trí lưu khó
 #### Cài đặt khóa công khai trên máy chủ từ xa
 Để sử dụng khóa SSH, bạn cần phải cài đặt khóa công khai của bạn vào tệp authorized_keys trên máy chủ từ xa. Bạn có thể sử dụng lệnh ssh-copy-id để thực hiện điều này dễ dàng.
 
-ssh-copy-id -i ~/.ssh/id_rsa.pub username@hostname_or_ip
+    ssh-copy-id -i ~/.ssh/id_rsa.pub username@hostname_or_ip
 
 -i ~/.ssh/id_rsa.pub: Chỉ định tệp khóa công khai bạn muốn cài đặt.
 username@hostname_or_ip: Thay thế bằng tên người dùng và địa chỉ IP hoặc tên miền của máy chủ từ xa.
@@ -736,7 +736,7 @@ Lệnh này sẽ thêm khóa công khai của bạn vào tệp ~/.ssh/authorized
 
 Sau khi khóa công khai đã được cài đặt trên máy chủ từ xa, bạn có thể kết nối mà không cần nhập mật khẩu, chỉ cần khóa riêng của bạn.
 
-ssh -i ~/.ssh/id_rsa username@hostname_or_ip
+    ssh -i ~/.ssh/id_rsa username@hostname_or_ip
 
 -i ~/.ssh/id_rsa: Chỉ định tệp khóa riêng của bạn.
 username@hostname_or_ip: Tên người dùng và địa chỉ IP hoặc tên miền của máy chủ từ xa.
@@ -758,7 +758,7 @@ Port 22: Cổng SSH (thay đổi nếu sử dụng cổng khác).
 
 Khi cấu hình tệp này, bạn có thể kết nối bằng cách đơn giản:
 
-ssh example
+    ssh example
 #### Bảo mật khóa riêng
 Khóa riêng (private key) phải được bảo vệ cẩn thận. Nếu khóa riêng của bạn bị lộ, bất kỳ ai có khóa công khai tương ứng có thể truy cập vào hệ thống của bạn.
 
@@ -767,14 +767,14 @@ Lưu ý bảo mật:
 - Sử dụng passphrase: Khi tạo khóa, sử dụng một passphrase để bảo vệ khóa riêng của bạn.
 -Phân quyền đúng: Đảm bảo tệp khóa riêng có quyền truy cập chỉ dành cho bạn. Bạn có thể thiết lập quyền bằng lệnh:
 
-chmod 600 ~/.ssh/id_rsa
+    chmod 600 ~/.ssh/id_rsa
 
 Không chia sẻ khóa riêng: Chỉ chia sẻ khóa công khai.
 
 ### Dùng port custom
 Nếu máy chủ từ xa đang chạy SSH trên một cổng khác ngoài cổng mặc định (22), bạn có thể chỉ định cổng tùy chỉnh bằng tùy chọn -p. Cú pháp là:
 
-ssh -p port_number username@hostname_or_ip
+    ssh -p port_number username@hostname_or_ip
 
 - port_number là số cổng tùy chỉnh mà máy chủ từ xa đang lắng nghe.
 - username là tên người dùng trên máy chủ từ xa.
@@ -786,7 +786,7 @@ Lệnh scp (secure copy) được sử dụng để sao chép tập tin và thư
 ### scp 1 file
 #### Từ máy tính của bạn đến máy chủ từ xa:
 
-scp /path/to/local/file username@remote_host:/path/to/remote/directory/
+    scp /path/to/local/file username@remote_host:/path/to/remote/directory/
 
 - /path/to/local/file: Đường dẫn đến tập tin trên máy tính của bạn.
 - username@remote_host: Tên người dùng và địa chỉ IP hoặc tên miền của máy chủ từ xa.
@@ -794,7 +794,7 @@ scp /path/to/local/file username@remote_host:/path/to/remote/directory/
 
 #### Từ máy chủ từ xa về máy tính của bạn:
 
-scp username@remote_host:/path/to/remote/file /path/to/local/directory/
+    scp username@remote_host:/path/to/remote/file /path/to/local/directory/
 
 - username@remote_host: Tên người dùng và địa chỉ IP hoặc tên miền của máy chủ từ xa.
 - /path/to/remote/file: Đường dẫn đến tập tin trên máy chủ từ xa.
@@ -805,7 +805,7 @@ scp username@remote_host:/path/to/remote/file /path/to/local/directory/
 
 #### Từ máy tính của bạn đến máy chủ từ xa:
 
-scp -r /path/to/local/folder username@remote_host:/path/to/remote/directory/
+    scp -r /path/to/local/folder username@remote_host:/path/to/remote/directory/
 
 - /path/to/local/folder: Đường dẫn đến thư mục bạn muốn sao chép trên máy tính của bạn.
 - username@remote_host: Tên người dùng và địa chỉ IP hoặc tên miền của máy chủ từ xa.
@@ -813,7 +813,7 @@ scp -r /path/to/local/folder username@remote_host:/path/to/remote/directory/
 
 #### Từ máy chủ từ xa về máy tính của bạn:
 
-scp -r username@remote_host:/path/to/remote/folder /path/to/local/directory/
+    scp -r username@remote_host:/path/to/remote/folder /path/to/local/directory/
 
 - username@remote_host: Tên người dùng và địa chỉ IP hoặc tên miền của máy chủ từ xa.
 - /path/to/remote/folder: Đường dẫn đến thư mục trên máy chủ từ xa.
@@ -824,7 +824,7 @@ Rsync (Remote Sync) là một công cụ hữu hiệu để sao lưu và đồng
 
 Cú pháp cơ bản
 
-rsync options source destination
+    rsync options source destination
 
 Các tuỳ chọn trong rsync
 
@@ -839,35 +839,34 @@ Các tuỳ chọn trong rsync
 -h : định dạng số
 
 ### rsync file
-rsync -av /source/path/file.txt /destination/path/
+    rsync -av /source/path/file.txt /destination/path/
 
 ### rsync folder
-rsync -av /source/path/folder/ /destination/path/
+    rsync -av /source/path/folder/ /destination/path/
 
 ### rsync increamental
-rsync -av --delete /source/path/ /destination/path/
+    rsync -av --delete /source/path/ /destination/path/
 
 ## cat command
 Cat command trong Linux là một lệnh thường dùng nhất và bạn cần học. Nó là chữ viết tắt của từ concatenate. Nó giúp bạn tạo, nhập, print file tới màn hình chuẩn hay tới một file khác, và còn nhiều tính năng khác nữa.
 
 Cú pháp Cat Command
 
-cat [OPTION] [FILE]
-
+    cat [OPTION] [FILE]
 
 ### cat nội dung 1 file
 Để hiển thị nội dung của một tệp, bạn sử dụng lệnh:
 
-cat filename.txt
+    cat filename.txt
 
 ### cat dòng thứ <n> trong file
 cat không trực tiếp hỗ trợ việc hiển thị dòng cụ thể, nhưng bạn có thể kết hợp với sed để làm điều này:
 
-sed -n '<n>p' filename.txt
+    sed -n '<n>p' filename.txt
 
 Trong đó, <n> là số dòng mà bạn muốn hiển thị. Ví dụ, để hiển thị dòng thứ 3, bạn dùng:
 
-sed -n '3p' filename.txt
+    sed -n '3p' filename.txt
 
 ### cat nhiều dòng vào 1 file bằng EOF
 Bạn có thể sử dụng cú pháp here document với EOF để thêm nhiều dòng vào một tệp. Ví dụ:
@@ -886,14 +885,14 @@ Lệnh echo trong Unix/Linux được sử dụng để hiển thị thông đi�
 ### Dùng echo để chèn thêm 1 dòng vào cuối file
 Bạn có thể sử dụng >> để thêm nội dung vào cuối tệp mà không ghi đè nội dung hiện có. Ví dụ:
 
-echo "This is a new line" >> filename.txt
+    echo "This is a new line" >> filename.txt
 
 Lệnh này sẽ chèn dòng "This is a new line" vào cuối filename.txt.
 
 ### Dùng echo để overwirte nội dung của file
 Để ghi đè toàn bộ nội dung của tệp bằng lệnh echo, bạn sử dụng > thay vì >>. Ví dụ:
 
-echo "This is the new content" > filename.txt
+    echo "This is the new content" > filename.txt
 
 Lệnh này sẽ thay thế toàn bộ nội dung hiện có của filename.txt bằng dòng "This is the new content".
 
@@ -903,17 +902,17 @@ Lệnh head được dùng để in ra các phần đầu tiên của tệp. Nó
 
 Cú pháp cơ bản của lệnh là:
 
-head [option] [file]
+    head [option] [file]
 
 Lệnh head được sử dụng để hiển thị các dòng đầu tiên của tệp. Theo mặc định, head hiển thị 10 dòng đầu tiên.
 
 Hiển thị 10 dòng đầu tiên của tệp:
 
-head filename.txt
+    head filename.txt
 
 Hiển thị n dòng đầu tiên của tệp:
 
-head -n 20 filename.txt
+    head -n 20 filename.txt
 
 
 ### Tail 
@@ -921,24 +920,24 @@ Lệnh này in các dòng cuối cùng của tệp. Nó đọc các tệp từ c
 
 Cú pháp cơ bản của lệnh là:
 
-tail [option] [file]
+    tail [option] [file]
 
 Lệnh tail được sử dụng để hiển thị các dòng cuối cùng của tệp. Theo mặc định, tail hiển thị 10 dòng cuối cùng.
 
 Hiển thị 10 dòng cuối cùng của tệp:
 
-tail filename.txt
+    tail filename.txt
 
 Hiển thị n dòng cuối cùng của tệp:
 
-tail -n 20 filename.txt
+    tail -n 20 filename.txt
 
 #### tail và tailf
 ##### Lệnh tail với tùy chọn -f
 
 tail với tùy chọn -f được sử dụng để theo dõi một tệp trong thời gian thực, tức là hiển thị nội dung mới được thêm vào cuối tệp khi tệp đó được ghi thêm. Đây là tính năng phổ biến nhất khi theo dõi các tệp nhật ký.
 
-tail -f filename.txt
+    tail -f filename.txt
 
 Tùy chọn -f của tail có các tính năng hiện đại như khả năng xử lý tốt khi tệp được ghi đè hoặc di chuyển.
 
@@ -950,14 +949,14 @@ tailf là một lệnh cũ và gần giống với tail -f, nhưng có một s�
 
 - Giới hạn: tailf không hỗ trợ tùy chọn mở rộng hoặc theo dõi các tệp đã được di chuyển hoặc ghi đè. Nó sẽ ngừng theo dõi khi tệp bị di chuyển hoặc thay thế, điều này đã làm cho tailf trở nên ít phổ biến hơn và không còn được khuyến nghị sử dụng.
 
-tailf filename.txt
+    tailf filename.txt
 
 ## sed command
 sed (Stream Editor) là một công cụ mạnh mẽ trong Unix/Linux để xử lý và biến đổi văn bản. Một trong những tính năng phổ biến nhất của sed là tìm kiếm và thay thế chuỗi.
 
 ### Dùng sed để find and replace một string trong file
 
-sed 's/old_string/new_string/g' filename.txt
+    sed 's/old_string/new_string/g' filename.txt
 
 s: Là lệnh thay thế (substitute).
 old_string: Chuỗi bạn muốn tìm kiếm.
@@ -1022,17 +1021,17 @@ Lệnh sort trong Unix/Linux được sử dụng để sắp xếp dữ liệu.
 ## uniq command
 Lệnh uniq trong Linux được sử dụng để hiển thị các dòng giống hệt nhau trong tệp văn bản
 ### lọc ra các dòng lặp lại trong một file
-uniq -d file.txt 
+    uniq -d file.txt 
 ### lọc ra các dòng lặp lại trong file và đếm số lượng các dòng lặp lại
-uniq -d -c file.txt 
+    uniq -d -c file.txt 
 
 ## wc command
 Lệnh wc (word count) có thể được sử dụng để đếm số dòng, số từ, và số ký tự trong một file. Dưới đây là cách sử dụng wc cho các yêu cầu của bạn:
 
 ### Đếm số dòng trong file
-wc -l file.txt 
+    wc -l file.txt 
 ### Đếm số kí tự trong file
-wc -m file.txt 
+    wc -m file.txt 
 
 ## chmod, chown, chattr command
 Các lệnh chmod, chown và chattr là những công cụ cơ bản và quan trọng trong hệ thống Linux/Unix để quản lý quyền truy cập vào các tập tin và thư mục. Chúng cho phép người dùng điều chỉnh quyền sở hữu, quyền đọc, ghi và thực thi đối với các đối tượng trên hệ thống.
@@ -1044,7 +1043,6 @@ Lệnh chown: Thay đổi chủ sở hữu và nhóm
 Lệnh chattr: Thay đổi các thuộc tính mở rộng
 
 ### Phân quyền bằng số, phân quyền bằng chữ
-chmod - Phân quyền bằng số và bằng chữ
 
 #### Phân quyền bằng số:
 Mỗi quyền được biểu diễn bằng một con số từ 0 đến 7:
@@ -1088,39 +1086,39 @@ Ví dụ:
 Lệnh find là một công cụ hữu ích để tìm kiếm các tệp tin trong hệ thống Linux. Nó cho phép người dùng tìm kiếm theo nhiều tiêu chí khác nhau và thực hiện các hành động trên các tệp tin được tìm thấy
 
 ### find các file có đuôi .log
-find / -type f -name "*.log"
+    find / -type f -name "*.log"
 
-    find /: Tìm kiếm trên toàn bộ hệ thống (/ là thư mục gốc).
-    -type f: Chỉ tìm kiếm các tệp tin (file), không tìm thư mục.
-    -name "*.log": Tìm kiếm các tệp tin có tên kết thúc bằng .log.
+find /: Tìm kiếm trên toàn bộ hệ thống (/ là thư mục gốc).
+-type f: Chỉ tìm kiếm các tệp tin (file), không tìm thư mục.
+-name "*.log": Tìm kiếm các tệp tin có tên kết thúc bằng .log.
 
 ### find các folder có tên abc
-find / -type d -name "abc"
+    find / -type d -name "abc"
 
-    -type d: Chỉ tìm kiếm các thư mục.
-    -name "abc": Tìm các thư mục có tên chính xác là abc.
+-type d: Chỉ tìm kiếm các thư mục.
+-name "abc": Tìm các thư mục có tên chính xác là abc.
 
 ### find các file có tên abc
-find / -type f -name "abc"
+    find / -type f -name "abc"
 
-    -type f: Chỉ tìm kiếm các tệp tin.
-    -name "abc": Tìm các tệp tin có tên chính xác là abc.
+-type f: Chỉ tìm kiếm các tệp tin.
+-name "abc": Tìm các tệp tin có tên chính xác là abc.
 
 ### find các file có tên abc và thực hiện phần quyền read only cho file
-find / -type f -name "abc" -exec chmod 444 {} \;
+    find / -type f -name "abc" -exec chmod 444 {} \;
 
-    -exec chmod 444 {} \;: Sau khi tìm thấy các tệp tin, thực hiện lệnh chmod 444 {} trên chúng. Trong đó {} được thay thế bằng đường dẫn của từng tệp tin được tìm thấy.
-    chmod 444: Cấp quyền read-only (r--r--r--) cho các tệp tin.
+-exec chmod 444 {} \;: Sau khi tìm thấy các tệp tin, thực hiện lệnh chmod 444 {} trên chúng. Trong đó {} được thay thế bằng đường dẫn của từng tệp tin được tìm thấy.
+chmod 444: Cấp quyền read-only (r--r--r--) cho các tệp tin.
 
 ## cp command
 Lệnh cp trong Linux/Unix được sử dụng để sao chép các tệp tin và thư mục
 
 ### cp file
-cp file.txt file_copy.txt
+    cp file.txt file_copy.txt
 
 Câu lệnh này sẽ tạo một bản sao của tệp tin file.txt với tên file_copy.txt trong cùng thư mục.
 ### cp folder
-cp -r documents/ documents_backup/
+    cp -r documents/ documents_backup/
 
 Câu lệnh này sẽ sao chép toàn bộ nội dung của thư mục documents/ sang thư mục mới documents_backup/. Tùy chọn -r (recursive) cho phép sao chép cả các thư mục con. 
 
@@ -1129,40 +1127,40 @@ Lệnh mv trong Linux/Unix được sử dụng để di chuyển hoặc đổi 
 
 ### mv file, folder
 #### Di chuyển tệp tin: 
-mv file.txt documents/
+    mv file.txt documents/
 
 Câu lệnh này sẽ di chuyển tệp tin file.txt vào thư mục documents/. 
 #### Đổi tên tệp tin: 
-mv file.txt new_file.txt
+    mv file.txt new_file.txt
 
 Câu lệnh này sẽ đổi tên tệp tin file.txt thành new_file.txt. 
 
 #### Di chuyển thư mục: 
-mv documents/ documents_backup/
+    mv documents/ documents_backup/
 
 Câu lệnh này sẽ di chuyển thư mục documents/ vào thư mục documents_backup/. 
 
 #### Đổi tên thư mục: 
-mv documents/ new_folder/
+    mv documents/ new_folder/
 
 Câu lệnh này sẽ đổi tên thư mục documents/ thành new_folder/. 
 ## cut command
 Lệnh cut trong Linux/Unix được sử dụng để trích xuất một phần của một chuỗi ký tự
 
 ### cut kí tự thứ <n> trong string
-echo "Hello, World!" | cut -c 7
+    echo "Hello, World!" | cut -c 7
 
 ![ảnh](https://github.com/user-attachments/assets/c1c2508b-f526-4654-a829-d69a43a75a22)
 
 ### cut từ kí tự thứ <n> trở về sau
-echo "Hello, World!" | cut -c 7-
+    echo "Hello, World!" | cut -c 7-
 
 ![ảnh](https://github.com/user-attachments/assets/fffcdb7d-86b9-475f-a47b-bf86e0050f05)
 
 Kết quả: World!
 Lệnh này sẽ trích xuất các ký tự từ vị trí thứ 7 trở về sau trong chuỗi "Hello, World!".
 ### cut từ kí tự thứ <n> trở về trước
-echo "Hello, World!" | cut -c -6
+    echo "Hello, World!" | cut -c -6
 
 ![Uploading ảnh.png…]()
 
@@ -1173,49 +1171,49 @@ Lệnh dig (Domain Information Groper) là một công cụ mạnh mẽ để ki
 
 ### Dùng Dig command để kiểm tra resolv record A, MX, NS
 #### resolv record A
-dig vietnix.vn A
+    dig vietnix.vn A
 
 #### resolv record MX
-dig vietnix.vn MX
+    dig vietnix.vn MX
 
 #### resolv record NS
-dig vietnix.vn NS
+    dig vietnix.vn NS
 
 ### Dùng Dig command để kiểm tra resolv record A, MX, NS với custom DNS
 #### resolv record A
-dig @8.8.8.8 vietnix.vn A
+    dig @8.8.8.8 vietnix.vn A
 
 #### resolv record MX
-dig @8.8.8.8 vietnix.vn MX
+    dig @8.8.8.8 vietnix.vn MX
 
 #### resolv record NS
-dig @8.8.8.8 vietnix.vn NS
+    dig @8.8.8.8 vietnix.vn NS
 
 ## tar/zip/unzip command
 Trong Linux và các hệ điều hành tương tự, các lệnh tar, zip và unzip được sử dụng để nén và giải nén các tệp và thư mục.
 
 ### Nén/Giải nén file tar.gz
 #### Nén file/thư mục: 
- tar -czf output.tar.gz input_file_or_directory
+     tar -czf output.tar.gz input_file_or_directory
  
-    -c: Tạo một kho lưu trữ mới
-    -z: Sử dụng nén gzip
-    -f: Chỉ định tên tệp kho lưu trữ
+-c: Tạo một kho lưu trữ mới
+-z: Sử dụng nén gzip
+-f: Chỉ định tên tệp kho lưu trữ
 #### Giải nén file tar.gz: 
-tar -xzf input.tar.gz
+    tar -xzf input.tar.gz
 
-    -x: Giải nén
-    -z: Sử dụng nén gzip
-    -f: Chỉ định tên tệp kho lưu trữ
+-x: Giải nén
+-z: Sử dụng nén gzip
+-f: Chỉ định tên tệp kho lưu trữ
 
 ### Nén/Giải nén file .zip
 #### Nén file/thư mục: 
-zip -r output.zip input_file_or_directory
+    zip -r output.zip input_file_or_directory
 
-    -r: Nén đệ quy (để nén thư mục)
+- -r: Nén đệ quy (để nén thư mục)
 
 #### Giải nén file .zip: 
-unzip input.zip
+    unzip input.zip
 
 ## mount/umount command
 
@@ -1224,39 +1222,39 @@ Giả sử ổ cứng mới đã được gắn vào hệ thống với thiết 
 
 Tạo phân vùng trên ổ cứng mới:
 
-sudo fdisk /dev/sdb
+    sudo fdisk /dev/sdb
 
 Tạo hệ thống tệp (filesystem):
 
 Để tạo hệ thống tệp ext4 trên phân vùng mới tạo, sử dụng lệnh sau:
 
-sudo mkfs.ext4 /dev/sdb1
+    sudo mkfs.ext4 /dev/sdb1
 
 Thay /dev/sdb1 bằng tên phân vùng cụ thể.
 ### Kiểm tra được có bao nhiêu ổ cứng trên máy chủ
 Lệnh lsblk: Hiển thị danh sách các thiết bị lưu trữ và phân vùng của chúng.
 
-lsblk
+    lsblk
 
 Lệnh fdisk -l: Liệt kê tất cả các phân vùng và ổ đĩa.
 
-fdisk -l
+    fdisk -l
 
 Lệnh df -h: Hiển thị thông tin về không gian đĩa đã sử dụng và còn trống.
 
-df -h
+    df -h
 ### Mount ổ cứng vào /mnt/test
- Tạo thư mục mount point
+Tạo thư mục mount point
  
-mkdir /mnt/test
+    mkdir /mnt/test
 
- Mount ổ cứng vào thư mục /mnt/test
+Mount ổ cứng vào thư mục /mnt/test
  
-mount /dev/sdb1 /mnt/test
+    mount /dev/sdb1 /mnt/test
 
 ### Umount /mnt/test
 
-umount /mnt/test
+    umount /mnt/test
 
 
 ## Symbolic Links, Hard Links command
@@ -1267,7 +1265,7 @@ Symbolic Link (hay còn gọi là symlink hoặc soft link) là một loại fil
 ### Ví dụ về Sym Link
 Giả sử bạn có file gốc là /home/user/file.txt và bạn muốn tạo một symlink có tên là /home/user/symlink.txt:
 
-ln -s /home/user/file.txt /home/user/symlink.txt
+    ln -s /home/user/file.txt /home/user/symlink.txt
 
 Bây giờ, khi bạn truy cập symlink.txt, nó sẽ chuyển hướng bạn đến nội dung của file.txt.
 ### Định nghĩa Hard Link
@@ -1276,7 +1274,7 @@ Hard Link là một tham chiếu trực tiếp đến dữ liệu trên ổ đĩ
 ### Ví dụ về Hard Link
 Giả sử bạn có file gốc là /home/user/file.txt và bạn muốn tạo một hard link có tên là /home/user/hardlink.txt:
 
-ln /home/user/file.txt /home/user/hardlink.txt
+    ln /home/user/file.txt /home/user/hardlink.txt
 
 Cả file.txt và hardlink.txt đều trỏ đến cùng một dữ liệu. Nếu bạn xóa file.txt, dữ liệu vẫn sẽ có sẵn qua hardlink.txt.
 ## ls command
@@ -1285,21 +1283,21 @@ Lệnh ls trong hệ điều hành Linux được sử dụng để liệt kê c
 ### Liệt kê danh sách file/thư mục
 Để liệt kê các file và thư mục trong thư mục hiện tại, bạn chỉ cần sử dụng lệnh ls:
 
-ls
+    ls
 ### Liệt kê danh sách file/thư mục và thuộc tính
 Để liệt kê file và thư mục cùng với các thuộc tính của chúng (như quyền, số lượng liên kết, chủ sở hữu, nhóm, kích thước, thời gian sửa đổi cuối cùng), bạn sử dụng tùy chọn -l:
 
-ls -l
+    ls -l
 ### Show file ẩn
 File ẩn trong Linux thường bắt đầu bằng dấu chấm (.). Để hiển thị cả file ẩn, bạn sử dụng tùy chọn -a:
 
-ls -a
+    ls -a
 
 Kết hợp hiển thị file ẩn và thuộc tính
 
-ls -la
+    ls -la
 
-ls -al
+    ls -al
 
 ## ps command
 Lệnh ps trong Linux được sử dụng để hiển thị thông tin về các tiến trình đang chạy trên hệ thống. Kết hợp với lệnh kill, bạn có thể dừng các tiến trình cụ thể
@@ -1309,33 +1307,33 @@ Lệnh ps đơn giản sẽ hiển thị các tiến trình hiện tại do ngư
 
 Sử dụng tùy chọn -e hoặc -A để liệt kê tất cả các tiến trình trên hệ thống:
 
-ps -e
+    ps -e
 
 hoặc
 
-ps -A
+    ps -A
 
 Sử dụng tùy chọn -f hoặc -l để hiển thị thông tin chi tiết (full-format listing) về các tiến trình, bao gồm PID (Process ID), TTY, TIME, CMD, v.v.:
 
-ps -ef
+    ps -ef
 
 hoặc
 
-ps -el
+    ps -el
 
 Sử dụng tùy chọn --forest để hiển thị các tiến trình trong dạng cây, giúp bạn thấy các tiến trình cha-con dễ dàng hơn:
 
-ps -ef --forest
+    ps -ef --forest
 
 ### kill tiến trình
 Sử dụng lệnh kill với PID của tiến trình bạn muốn dừng:
 
-kill PID
+    kill PID
 
 Dừng tiến trình một cách mạnh mẽ (force kill)
 Nếu tiến trình không dừng lại khi sử dụng lệnh kill thông thường, bạn có thể sử dụng tín hiệu -9 để ép buộc dừng:
 
-kill -9 PID
+    kill -9 PID
 
 Lưu ý rằng việc sử dụng kill -9 có thể không an toàn vì nó không cho tiến trình cơ hội để dọn dẹp và lưu trạng thái trước khi bị dừng.
 ## top command
@@ -1366,9 +1364,9 @@ Các trạng thái CPU được hiển thị trong top bao gồm:
     st (steal time): Phần trăm thời gian CPU bị "ăn cắp" từ một máy ảo khác (trong trường hợp sử dụng ảo hóa).  
     
 #### Process States
-    Zombie Process: Tiến trình đã kết thúc nhưng vẫn còn tồn tại trong bảng tiến trình bởi vì tiến trình cha chưa đọc trạng thái thoát của nó. Zombie tiến trình không sử dụng tài nguyên hệ thống (ngoại trừ một mục nhỏ trong bảng tiến trình).
+Zombie Process: Tiến trình đã kết thúc nhưng vẫn còn tồn tại trong bảng tiến trình bởi vì tiến trình cha chưa đọc trạng thái thoát của nó. Zombie tiến trình không sử dụng tài nguyên hệ thống (ngoại trừ một mục nhỏ trong bảng tiến trình).
 
-    Sleeping Process: Tiến trình đang đợi một sự kiện xảy ra (như I/O hoặc tín hiệu). Nó có thể là:
+Sleeping Process: Tiến trình đang đợi một sự kiện xảy ra (như I/O hoặc tín hiệu). Nó có thể là:
         Interruptible sleep: Tiến trình có thể bị đánh thức bởi các tín hiệu (được chỉ định bởi chữ S trong cột STAT).
         Uninterruptible sleep: Tiến trình không thể bị đánh thức bởi tín hiệu (được chỉ định bởi chữ D trong cột STAT), thường là khi đang chờ I/O từ đĩa hoặc mạng.    
     
@@ -1395,10 +1393,10 @@ Lệnh df trong Linux được sử dụng để hiển thị thông tin về vi
 
 ### Xem dung lượng disk
 Hiển thị thông tin cơ bản:
-df
+    df
 
 Hiển thị thông tin với đơn vị dễ đọc hơn:
-df -h
+    df -h
 ### Phân vùng 
 Trong Linux, phân vùng / (hay còn gọi là root partition) là phân vùng chính chứa hệ thống file gốc của hệ điều hành. Đây là nơi chứa tất cả các thư mục và file cần thiết cho hệ thống để khởi động và vận hành. Khi một hệ thống Linux khởi động, nó sẽ gắn kết phân vùng / trước tiên, và tất cả các thư mục khác đều là các nhánh con của phân vùng này.
 
