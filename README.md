@@ -965,32 +965,53 @@ new_string: Chuỗi bạn muốn thay thế.
 g: Tùy chọn toàn cục (global), thay thế tất cả các lần xuất hiện của old_string trong dòng. Nếu bỏ qua tùy chọn này, sed sẽ chỉ thay thế lần xuất hiện đầu tiên trên mỗi dòng.
 filename.txt: Tệp mà bạn muốn thay đổi.
 ## traceroute/tracert command
+Traceroute (hay tracert trên Windows) là một công cụ chẩn đoán mạng máy tính để hiển thị các tuyến đường (đường dẫn) và đo lường sự chậm trễ quá cảnh của các gói dữ liệu trên một giao thức Internet (IP) mạng.
+
+traceroute sử dụng bản tin time to live expired của lệnh ping để biết được từng chặng mà gói tin sẽ phải đi qua trước khi đến đích.
 
 Sau khi traceroute xong giải thích chi tiết kết quả trả về
 
 ![ảnh](https://github.com/user-attachments/assets/a0d1b8af-ba02-4265-90fb-99c4660a1fc3)
 
 ## netstat command
+netstat là một công cụ dòng lệnh được sử dụng để theo dõi số liệu thống kê về mạng. Nó cho phép bạn xem dữ liệu mạng như các cổng đang sử dụng, các kết nối đang hoạt động, các gói đã được chuyển, v.v.
 
-hiển thị các socket đang listen
+### hiển thị các socket đang listen
 
-don't resolve hostname
+![ảnh](https://github.com/user-attachments/assets/5611c06a-c882-42a2-9909-816e661502f1)
 
-don't resolve portname
+### don't resolve hostname
+Không giải quyết hostname: -n
 
-display process name/PID
 
-only show tcp socket
+### don't resolve portname
+Không giải quyết portname: -n (đồng thời không giải quyết cả hostname và portname)
 
-only show udp socket
+
+### display process name/PID
+Hiển thị tên tiến trình và PID: -p
+
+
+### only show tcp socket
+Chỉ hiển thị socket TCP: -t
+
+![ảnh](https://github.com/user-attachments/assets/4716d5ab-5d20-448a-b0a5-9f625b5827ab)
+
+### only show udp socket
+Chỉ hiển thị socket UDP: -u
+
+![ảnh](https://github.com/user-attachments/assets/02454160-5195-4d10-a0cb-57772f059181)
 
 ## sort command
+Lệnh sort trong Unix/Linux được sử dụng để sắp xếp dữ liệu. Dưới đây là cách sử dụng sort để sắp xếp theo thứ tự tăng dần, giảm dần và theo cột cụ thể:
 
-sort theo thứ tự tăng dần
+### sort theo thứ tự tăng dần
 
-sort theo thứ tự giảm dần
 
-sort theo column
+### sort theo thứ tự giảm dần
+
+
+### sort theo column
 
 ## uniq command
 
