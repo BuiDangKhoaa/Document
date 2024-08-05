@@ -1006,14 +1006,14 @@ Chỉ hiển thị socket UDP: -u
 Lệnh sort trong Unix/Linux được sử dụng để sắp xếp dữ liệu. Dưới đây là cách sử dụng sort để sắp xếp theo thứ tự tăng dần, giảm dần và theo cột cụ thể:
 
 ### sort theo thứ tự tăng dần
-
+![ảnh](https://github.com/user-attachments/assets/103b5550-f13f-48b6-8047-409624205566)
 
 ### sort theo thứ tự giảm dần
-
 
 ![Uploading Chụp màn hình từ 2024-08-05 09-42-21.png…]()
 
 ### sort theo column
+![ảnh](https://github.com/user-attachments/assets/00f06b5a-37f1-49f6-9bbe-6f03f7118eb5)
 
 ## uniq command
 
