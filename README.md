@@ -376,7 +376,7 @@ TLD Name Server là máy chủ tên miền cấp cao nhất, chịu trách nhi�
 Authoritative Name Server
 Authoritative Name Server lưu trữ thông tin về tên miền và địa chỉ IP tương ứng. Là điểm cuối của quá trình truy vấn và phân giải địa chỉ IP cần thiết cho DNS Recursor.
 
-### Nguyên tác vận hành của DNS
+### Nguyên tắc vận hành của DNS
 
 Nội dung bên dưới sẽ đề cập khái quát về nguyên tắc làm việc DNS Server cụ thể như sau: 
 
