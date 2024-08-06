@@ -21,7 +21,7 @@ Về phía người sử dụng hosting, họ chỉ cần tiến hành upload c�
 
 ## Virtual Hosts
 
-Virtual Host là một dạng lưu trữ mà bạn lưu được nhiều domain khác nhau trên cùng một máy chủ serer. Hiện nay Virtual host được xem là một giải pháp tiết chi phí vì nó cho phép bặn nhúng nhiều domain trên một địa chỉ IP trong một Server. Server sẽ tự động hiểu tên miền nào đang vận hành bên trong vị trí lưu trữ Server tuỳ theo cách cài đặt của bạn.
+Virtual Host là một dạng lưu trữ mà bạn lưu được nhiều domain khác nhau trên cùng một máy chủ serer. Hiện nay Virtual host được xem là một giải pháp tiết chi phí vì nó cho phép bạn nhúng nhiều domain trên một địa chỉ IP trong một Server. Server sẽ tự động hiểu tên miền nào đang vận hành bên trong vị trí lưu trữ Server tuỳ theo cách cài đặt của bạn.
 
 Virtual Hosts được xem là một giải pháp tối ưu vừa tiết kiệm chi phí vừa được trải nghiệm tốt khi sử dụng nhiều tên miền chỉ trên một địa chỉ IP của Server. Bên cạnh đó, Virtual Hosting còn mang đến khá nhiều lợi ích trong quá trình sử dụng như:
 
