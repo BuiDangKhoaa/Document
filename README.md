@@ -387,7 +387,7 @@ Nội dung bên dưới sẽ đề cập khái quát về nguyên tắc làm vi�
 
 - Mỗi DNS server sẽ quản lý và chịu trách nhiệm phân giải tên miền từ các máy bên trong tên miền đến các địa chỉ internet mà nó quản lý. Ngoài ra, nó còn có trách nhiệm trả lời các yêu cầu từ các DNS server khác bên ngoài đang cố gắng phân giải tên miền mà nó quản lý. Tất cả các nhà cung cấp dịch vụ đều có hệ thống DNS riêng để đảm bảo an toàn và hiệu quả cho người dùng, và INTERNIC là tổ chức quản lý các tên miền và DNS server trên toàn thế giới.
 
-### Cách phần giải địa chỉ DNS
+### Cách phân giải địa chỉ DNS
 
 Để hiểu được cơ chế hoạt động của DNS là gì bạn cần hiểu quy trình của một máy tính cá nhân khi muốn truy cập vào địa chỉ Vietnix.vn, cụ thể theo từng bước như sau: 
 
