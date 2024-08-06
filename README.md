@@ -241,8 +241,10 @@ Tên miền được cấu thành từ các ký tự và chữ số trong bảng
 
 ### Thành phần của Domain
 
-https://    host247.      vietnix                .vn                  /webmail
-protocol    sub-domain    second level domain    top level domain     page-path
+| Protocol | Sub-domain | Second Level Domain | Top Level Domain | Page Path |
+|----------|------------|---------------------|------------------|-----------|
+| https:// | host247.   | vietnix             | .vn              | /webmail  |
+
 
 #### Protocol 
 là một tập hợp các quy tắc chuẩn cho phép hai hoặc các thực thể trong cùng một hệ thống để trao đổi thông tin liên lạc dữ liệu qua các kênh truyền thông.
