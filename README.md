@@ -51,7 +51,7 @@ Name Based (xác định website dựa theo tên – Domain Name): Nhiều websi
     
 ## SEO Hositng 
 
-SEO Hosting là giải pháp hosting được tạo rả giúp cho các website cần tối ưu SEO
+SEO Hosting là giải pháp hosting được tạo ra giúp cho các website cần tối ưu SEO
 
 Mỗi tài khoản hosting sẽ có nhiều địa chỉ IP giúp chạy nhiều website trên cùng một tài khoản và các website sẽ có range IP khác nhau, không bị Google footprint.
 
