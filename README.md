@@ -378,8 +378,6 @@ Authoritative Name Server lưu trữ thông tin về tên miền và địa ch�
 
 ### Nguyên tác vận hành của DNS
 
-Về vận hành của DNS là gì sẽ có cơ chế hoạt động tương tự với hệ thống khách, nó cũng sẽ có những nguyên tắc hoạt động nhất định và muốn sử dụng được bạn bắt buộc phải hiểu được nguyên lý hoạt động.
-
 Nội dung bên dưới sẽ đề cập khái quát về nguyên tắc làm việc DNS Server cụ thể như sau: 
 
 - Mỗi nhà cung cấp dịch vụ sẽ có hệ thống DNS riêng để phân giải tên miền của mình trên Internet và đảm bảo cho người dùng có thể truy cập vào các trang web của doanh nghiệp nhanh chóng nhất.
