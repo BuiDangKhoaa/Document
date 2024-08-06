@@ -410,11 +410,11 @@ Bước 5: Bởi vì máy chủ quản lý tên miền VN có chứa cơ sở d�
 Bước 6: Cuối cùng máy chủ tên miền cục bộ sẽ gửi thông tin về tên miền Vietnix đến máy Client, sau đó client sẽ tiếp tục sử dụng ip vừa được cấp để truy cập tới máy  Server Vietnix.vn. 
 
 ## DKIM
-DKIM là viết tắt của DomainKeys Indentified Mail - một phương thức giúp xác nhận Email thông qua chữ ký số giúp tránh email giả mạo. Một kỹ thuật thươngf được sử dụng trong lừa đảo và spapm email.
+DKIM là viết tắt của DomainKeys Indentified Mail - một phương thức giúp xác nhận Email thông qua chữ ký số giúp tránh email giả mạo. Một kỹ thuật thường được sử dụng trong lừa đảo và spam email.
 
 DKIM cho phép người nhận kiểm tra xem email được xác nhận từ một tên miền cụ thể có thực sự được chủ sở hữu uy quyền hay không? Nó sẽ gắn chữ ký điện tử, được liên kết với tên miền vào mỗi email gửi đi. Hệ thống người nhận có thể xác minh điều này bằng cách tra cứu mã khóa công khai (Public-key cryptography) của người gửi được xuất bản trong DNS.
 
-Bên cạnh đó, DKIM còn cso khả năng chặn các email giả mạo, đây là chức năng được sử dụng nhiều hiện nay. Đối với các thư với mục đích giả mạo, lừa đảo, email spam chứa các mã độc….
+Bên cạnh đó, DKIM còn có khả năng chặn các email giả mạo, đây là chức năng được sử dụng nhiều hiện nay. Đối với các thư với mục đích giả mạo, lừa đảo, email spam chứa các mã độc….
 
 - Khóa công khai thường được công bố trên DNS với dưới dạng TXT record.
 - Khi gửi email, chữ ký sẽ được chèn lên đầu với trường DKIM-Signature.
@@ -486,7 +486,7 @@ Bản ghi PTR trong DNS có cấu trúc cơ bản như sau:
 
 PTR records đóng vai trò quan trọng trong việc xác minh tính hợp lệ của địa chỉ IP và tên miền trong các hệ thống DNS ngược. Chúng thường được sử dụng trong các quy trình bảo mật mạng và kiểm tra email để đảm bảo tính chính xác và độ tin cậy của các kết nối mạng.
         
-## Datacenteratacenter
+## Datacenter
 Datacenter (hay còn gọi là trung tâm dữ liệu) là nơi chứa hệ thống máy tính hoặc máy chủ và các tài nguyên công nghệ với mật độ cao, chẳng hạn như hệ thống lưu trữ (storage systems) và truyền thông mạng (network communications).
 
 Datacenter thường bao gồm nguồn cung cấp điện dự phòng, kết nối truyền thông dữ liệu dự phòng, kiểm soát môi trường, chẳng hạn như điều hòa không khí, ngăn chặn hỏa hoạn và các thiết bị an ninh khác nhau. Các cụm server nối mạng được sử dụng để xử lý, lưu trữ và phân phối lượng lớn dữ liệu. Đối với hầu hết mọi loại giao dịch kinh doanh, trao đổi dữ liệu điện tử là bắt buộc. Khi nhu cầu về dữ liệu tăng lên, datacenter ra đời để có thể xử lý các yêu cầu đó.
