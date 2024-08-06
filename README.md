@@ -277,7 +277,7 @@ Ví dụ:
 - .vn cho tên miền quốc gia của Việt Nam.
 
 #### Pgae-Path 
-là đường dẫn trang cho viết cách di chuyển trong cấu trúc trang web. Mỗi phần của đường dẫn trang thường thể hiện một thư mục hoặc một trang cụ thể trên trang web.
+là đường dẫn trang cho biết cách di chuyển trong cấu trúc trang web. Mỗi phần của đường dẫn trang thường thể hiện một thư mục hoặc một trang cụ thể trên trang web.
 
 Ví dụ:
 
