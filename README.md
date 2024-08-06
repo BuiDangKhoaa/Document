@@ -195,7 +195,7 @@ Một số đặc điểm chính của IPv6 bao gồm:
 IPv6 là một phần quan trọng của nỗ lực chuyển đổi để đảm bảo Internet có đủ địa chỉ IP và đáp ứng được với sự mở rộng ngày càng tăng. Tuy IPv4 vẫn còn phổ biến, nhưng việc triển khai IPv6 đang được khuyến khích để đảm bảo sự liên thông và bền vững của Internet trong tương lai.
 
 ### IPv4 
-Pv4 (Internet Protocol version 4) là một phiên bản của giao thức Internet Protocol (IP), được thiết kế để xác định và gửi dữ liệu giữa các thiết bị trên Internet. IPv4 là phiên bản chính thức đầu tiên của IP và là nền tảng cơ bản cho việc kết nối mạng trên toàn cầu.
+IPv4 (Internet Protocol version 4) là một phiên bản của giao thức Internet Protocol (IP), được thiết kế để xác định và gửi dữ liệu giữa các thiết bị trên Internet. IPv4 là phiên bản chính thức đầu tiên của IP và là nền tảng cơ bản cho việc kết nối mạng trên toàn cầu.
 
 Dưới đây là một số đặc điểm chính của IPv4:
 * Kích thước địa chỉ: IPv4 sử dụng địa chỉ IP dạng 32 bit, tạo ra khoảng 4,3 tỷ (2^32) địa chỉ duy nhất. Địa chỉ IP thường được biểu diễn dưới dạng bốn nhóm số thập phân, ví dụ: 192.168.0.1.
